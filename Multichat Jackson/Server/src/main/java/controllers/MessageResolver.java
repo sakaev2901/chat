@@ -2,20 +2,24 @@ package controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import javafx.scene.shape.StrokeLineCap;
 import models.Message;
 import models.Payload;
 import models.User;
+import org.postgresql.shaded.com.ongres.scram.common.stringprep.StringPreparations;
 import servers.ChatMultiServer;
 import services.LoginService;
 import services.MessageService;
+import services.PaginationService;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.sql.PreparedStatement;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class PayloadController {
+public class MessageResolver {
 
     private Socket clientSocket;
     private PrintWriter out;
@@ -23,7 +27,7 @@ public class PayloadController {
     private List<ChatMultiServer.ClientHandler> clients;
     private ChatMultiServer.ClientHandler client;
 
-    public PayloadController(Socket clientSocket, List<ChatMultiServer.ClientHandler> clients, ChatMultiServer.ClientHandler client) {
+    public MessageResolver(Socket clientSocket, List<ChatMultiServer.ClientHandler> clients, ChatMultiServer.ClientHandler client) {
         try {
             this.clientSocket = clientSocket;
             this.clients = clients;
@@ -53,7 +57,14 @@ public class PayloadController {
                 }
                 break;
                 case "Command": {
-
+                    LinkedHashMap<String, String> commandPayload = (LinkedHashMap<String, String>)payload.getPayload();
+                    String command = commandPayload.get("command");
+                    switch (command) {
+                        case "get messages": {
+                            getMessages(commandPayload);
+                        }
+                        break;
+                    }
                 }
                 break;
             }
@@ -72,16 +83,21 @@ public class PayloadController {
         this.user = loginService.login((LinkedHashMap<String, String>)payload.getPayload());
         if (user != null) {
             out.println("Hello, " + user.getName());
-            out.println("true");
             System.out.println(user.getId() + " connected");
         } else {
             out.println("Wrong password or login");
-            out.println("false");
         }
     }
 
     public void doMessage(Payload payload) {
         MessageService messageService = new MessageService();
         messageService.sendMessage((LinkedHashMap<String, String>)payload.getPayload(), clients, user);
+    }
+
+    public void getMessages(LinkedHashMap commandPayload) {
+        PaginationService paginationService = new PaginationService();
+        Integer page = Integer.parseInt((String) commandPayload.get("page"));
+        Integer size = Integer.parseInt((String) commandPayload.get("size"));
+        out.println(paginationService.getMessages(page, size));
     }
 }

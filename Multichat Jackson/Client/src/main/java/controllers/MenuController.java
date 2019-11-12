@@ -20,6 +20,10 @@ public class MenuController {
 
     private SocketClient client;
 
+    public void test(String response) {
+        System.out.println(response);
+    }
+
     public void openWelcomeMenu() {
         while (true) {
             Scanner scanner = new Scanner(System.in);
@@ -73,12 +77,13 @@ public class MenuController {
         try {
             String jsonValue = objectMapper.writeValueAsString(payload);
             client.sendMessage(jsonValue);
-            String status = client.getIn().readLine();
-            if (status.equals("false")) {
-                openLoginPage();
-            } else {
-                openUserMenu();
-            }
+//            String status = client.getIn().readLine();
+//            if (status.equals("false")) {
+//                openLoginPage();
+//            } else {
+//                openUserMenu();
+//            }
+//            openUserMenu();
         } catch (Exception e) {
             throw new IllegalStateException(e);
         }
@@ -103,10 +108,12 @@ public class MenuController {
                 break;
             } else if(button == 2) {
                 openMessageArchive();
+                break;
             }
             else if (button == 3) {
                 logout();
                 openLoginPage();
+                break;
             } else {
                 System.out.println("Wrong button");
             }
@@ -120,28 +127,49 @@ public class MenuController {
         Integer size = scanner.nextInt();
         System.out.print("Page: ");
         Integer page = scanner.nextInt();
+        Payload payload = new Payload();
+        payload.setHeader("Command");
+        LinkedHashMap<String, String> commandPayload = new LinkedHashMap<>();
+        commandPayload.put("command", "get messages");
+        commandPayload.put("page", String.valueOf(page));
+        commandPayload.put("size", String.valueOf(size));
+        payload.setPayload(commandPayload);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            String jsonValue = objectMapper.writeValueAsString(payload);
+            client.sendMessage(jsonValue);
+        } catch (JsonProcessingException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
-    public void openChat() {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String messageText = scanner.nextLine();
-            if (messageText.equals("$menu")) {
-                openUserMenu();
-                break;
-            }
-            Message message = new Message(messageText);
-            Payload<Message> payload = new Payload("Message", message);
-            ObjectMapper mapper = new ObjectMapper();
-            try {
-                String jsonValue = mapper.writeValueAsString(payload);
-                client.sendMessage(jsonValue);
-                System.out.println(client.getIn().readLine());
-            } catch (Exception e) {
-                throw new IllegalStateException(e);
+    public Runnable chatTasker = new Runnable() {
+        @Override
+        public void run() {
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                String messageText = scanner.nextLine();
+                if (messageText.equals("$menu")) {
+                    openUserMenu();
+                    break;
+                }
+                Message message = new Message(messageText);
+                Payload<Message> payload = new Payload("Message", message);
+                ObjectMapper mapper = new ObjectMapper();
+                try {
+                    String jsonValue = mapper.writeValueAsString(payload);
+                    client.sendMessage(jsonValue);
+//                    System.out.println(client.getIn().readLine());
+                } catch (Exception e) {
+                    throw new IllegalStateException(e);
 
+                }
             }
         }
+    };
+
+    public void openChat() {
+        new Thread(chatTasker).start();
     }
 
     public void logout() {

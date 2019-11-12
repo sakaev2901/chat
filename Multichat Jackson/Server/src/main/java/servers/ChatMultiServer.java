@@ -1,11 +1,10 @@
 package servers;
 
-import controllers.PayloadController;
+import controllers.MessageResolver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
@@ -49,7 +48,7 @@ public class ChatMultiServer {
             try {
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 String inputLine;
-                PayloadController payloadController = new PayloadController(clientSocket, clients, this);
+                MessageResolver payloadController = new MessageResolver(clientSocket, clients, this);
                 while (!clientSocket.isClosed() &&(inputLine = in.readLine()) != null) {
 //                    if(".".equals(inputLine)) {
 //                        for (ClientHandler client:

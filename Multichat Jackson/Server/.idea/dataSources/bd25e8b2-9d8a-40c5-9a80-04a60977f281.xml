@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="java_lab@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>11.2</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="ii">
+      <ObjectId>16394</ObjectId>
+      <StateNumber>575</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="java_lab">
+      <ObjectId>16393</ObjectId>
+      <StateNumber>570</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>2126</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Relations>sequence|table|16395|16397|1
+sequence|table|24667|24662|1
+sequence|table|24676|16475|5
+</Relations>
+    </database>
+    <database id="4" parent="1" name="postgres">
+      <ObjectId>13012</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>567</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="project2k1s">
+      <ObjectId>16405</ObjectId>
+      <StateNumber>598</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="test">
+      <ObjectId>16414</ObjectId>
+      <StateNumber>619</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="7" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="16" parent="3" name="information_schema">
+      <ObjectId>12716</ObjectId>
+      <StateNumber>366</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>359</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="18" parent="3" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="20" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="21" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>360</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>2127</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="22" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="28" parent="3" name="plpgsql">
+      <ObjectId>12998</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>519</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="29" parent="21" name="chat_user_id_seq">
+      <ObjectId>24667</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1957</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="30" parent="21" name="lab_user_id_seq">
+      <ObjectId>16395</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>580</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="31" parent="21" name="message_id_seq">
+      <ObjectId>24676</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1989</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="32" parent="21" name="chat_user">
+      <ObjectId>24662</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1954</StateNumber>
+    </table>
+    <table id="33" parent="21" name="lab_user">
+      <ObjectId>16397</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>580</StateNumber>
+    </table>
+    <table id="34" parent="21" name="message">
+      <ObjectId>16475</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2022</StateNumber>
+    </table>
+    <column id="35" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1958</StateNumber>
+      <DefaultExpression>nextval(&apos;chat_user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="36" parent="32" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <StateNumber>1954</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="37" parent="32" name="mail">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <StateNumber>1954</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="38" parent="32" name="password">
+      <Position>4</Position>
+      <DataType>varchar(60)|0s</DataType>
+      <StateNumber>1954</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="39" parent="32" name="chat_user_pkey">
+      <ObjectId>24665</ObjectId>
+      <StateNumber>1954</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="32" name="chat_user_pkey">
+      <ObjectId>24666</ObjectId>
+      <StateNumber>1954</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>chat_user_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>580</StateNumber>
+      <DefaultExpression>nextval(&apos;lab_user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="42" parent="34" name="sender_name">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>2022</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="43" parent="34" name="text">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <StateNumber>1581</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="44" parent="34" name="date">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>1997</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="45" parent="34" name="id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1990</StateNumber>
+      <DefaultExpression>nextval(&apos;message_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="46" parent="34" name="message_pkey">
+      <ObjectId>24674</ObjectId>
+      <StateNumber>2022</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="34" name="message_pkey">
+      <ObjectId>24675</ObjectId>
+      <StateNumber>1986</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>message_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -23,7 +23,7 @@ public class MessageDaoImpl implements MessageDao {
             connection = CONFIG.getConnection();
             statement = connection.prepareStatement(FIND_ALL_WITH_PAGINATION);
             statement.setInt(1, size);
-            statement.setInt(2, page);
+            statement.setInt(2, page * size);
             ResultSet set = statement.executeQuery();
             LinkedList<Message> messages = new LinkedList<>();
             while (set.next()) {
@@ -31,6 +31,7 @@ public class MessageDaoImpl implements MessageDao {
                 message.setText(set.getString("text"));
                 message.setTimeStamp(set.getString("date"));
                 message.setSenderName(set.getString("sender_name"));
+                message.setId(set.getInt("id"));
                 messages.add(message);
             }
             return messages;

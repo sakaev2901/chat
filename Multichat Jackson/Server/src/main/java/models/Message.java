@@ -7,6 +7,7 @@ public class Message {
     private String  senderName;
     private String text;
     private String timeStamp;
+    private Integer id;
 
     public Message() {
 
@@ -39,5 +40,13 @@ public class Message {
 
     public void setTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

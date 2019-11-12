@@ -33,7 +33,8 @@ public class SocketClient {
                 try {
                     String response = in.readLine();
                     if (response != null) {
-                        System.out.println(response);
+//                        System.out.println(response);
+                        menuController.handleResponse(response);
 //                        menuController.handleResponse(response);
                     }
                 } catch (IOException e) {
