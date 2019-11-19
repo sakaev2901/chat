@@ -6,13 +6,14 @@ public final class Session {
 
     private static Session instance;
 
-    private Session(String role) {
+    private Session(String role, Integer id) {
         this.role = role;
+        this.id = id;
     }
 
-    public static Session getInstance(String role) {
+    public static Session getInstance(String role, Integer id) {
         if (instance == null) {
-            instance = new Session(role);
+            instance = new Session(role, id);
         }
         return instance;
     }

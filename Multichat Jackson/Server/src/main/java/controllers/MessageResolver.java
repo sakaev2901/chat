@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.scene.shape.StrokeLineCap;
 import models.Message;
 import models.Payload;
+import models.Product;
 import models.User;
 import org.postgresql.shaded.com.ongres.scram.common.stringprep.StringPreparations;
 import servers.ChatMultiServer;
@@ -68,6 +69,11 @@ public class MessageResolver {
                         case "get products": {
                             ProductsService productsService = new ProductsService();
                             out.println(productsService.getProducts());
+                        }
+                        break;
+                        case "set product": {
+                            ProductsService productsService = new ProductsService();
+                            productsService.addProduct(jsonRequest);
                         }
                     }
                 }

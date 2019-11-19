@@ -8,6 +8,7 @@ import dao.ProductDaoImpl;
 import models.Payload;
 import models.Product;
 
+import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
@@ -25,6 +26,21 @@ public class ProductsService {
             String jacksonOfProducts = objectMapper.writeValueAsString(payload);
             return jacksonOfProducts;
         } catch (JsonProcessingException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    public void addProduct(String jsonProduct) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            Payload payload = objectMapper.readValue(jsonProduct, Payload.class);
+            LinkedHashMap<String, String> payloadMap = (LinkedHashMap<String, String>)payload.getPayload();
+            Product product = new Product();
+            product.setName(payloadMap.get("name"));
+            product.setPrice(Integer.parseInt(payloadMap.get("price")));
+            ProductDaoImpl productDao = new ProductDaoImpl();
+            productDao.save(product);
+        } catch (IOException e) {
             throw new IllegalStateException(e);
         }
     }

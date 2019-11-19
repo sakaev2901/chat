@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import models.AuthData;
 import models.Payload;
 import services.LoginService;
+import services.TokenService;
 
 import java.util.Scanner;
 

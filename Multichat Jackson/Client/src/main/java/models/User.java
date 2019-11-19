@@ -1,9 +1,29 @@
 package models;
 
+import java.util.LinkedList;
+
 public class User {
     private Integer id;
     private String name;
     private AuthData authData;
+    private LinkedList<Integer> shoppingCart;
+    private LinkedList<Integer> orders;
+
+    public LinkedList<Integer> getShoppingCart() {
+        return shoppingCart;
+    }
+
+    public void setShoppingCart(LinkedList<Integer> shoppingCart) {
+        this.shoppingCart = shoppingCart;
+    }
+
+    public LinkedList<Integer> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(LinkedList<Integer> orders) {
+        this.orders = orders;
+    }
 
     public String getName() {
         return name;

@@ -58,6 +58,7 @@ public class MessageResolver {
             }
             break;
             case "Login": {
+                TokenService tokenService = new TokenService();
                 type = objectMapper.getTypeFactory().constructParametricType(Payload.class, Boolean.class);
                 try {
                     Payload<Boolean> payloadOfLoginStatus = objectMapper.readValue(serverMessage, type);
@@ -65,6 +66,7 @@ public class MessageResolver {
                     if (loginStatus) {
                         new MenuService(client).receiveMenu();
                     } else {
+                        tokenService.deleteToken();
                         System.err.println("Wrong login or password");
                         new LoginService(client).doLogin();
                     }

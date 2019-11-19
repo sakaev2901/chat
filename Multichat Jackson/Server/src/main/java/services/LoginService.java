@@ -22,10 +22,18 @@ public class LoginService {
     }
 
     public User login(LinkedHashMap<String, String> authData) {
-        String mail = authData.get("mail");
-        String password = authData.get("password");
         UserDaoImpl userDao = new UserDaoImpl();
-        User user = userDao.findByMailAndPassword(mail, password);
+        User user = null;
+        if (authData.get("token") != null) {
+            String userToken = authData.get("token");
+            TokenService tokenService = new TokenService();
+            user = tokenService.parse(userToken);
+        } else {
+            String mail = authData.get("mail");
+            String password = authData.get("password");
+            user = userDao.findByMailAndPassword(mail, password);
+
+        }
         PrintWriter out = null;
         try {
             out = new PrintWriter(client.getOutputStream(), true);

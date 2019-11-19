@@ -13,7 +13,7 @@
       <ObjectId>16393</ObjectId>
       <StateNumber>570</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2310</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2321</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16395|16397|1
@@ -121,7 +121,7 @@ sequence|table|24696|24691|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2311</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2322</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -216,7 +216,7 @@ sequence|table|24696|24691|1
     <table id="33" parent="21" name="chat_user">
       <ObjectId>24662</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2301</StateNumber>
+      <StateNumber>2320</StateNumber>
     </table>
     <table id="34" parent="21" name="lab_user">
       <ObjectId>16397</ObjectId>
@@ -265,20 +265,26 @@ sequence|table|24696|24691|1
       <StateNumber>2301</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="42" parent="33" name="chat_user_pkey">
+    <column id="42" parent="33" name="verifier">
+      <Position>6</Position>
+      <DataType>varchar(2050)|0s</DataType>
+      <StateNumber>2320</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="43" parent="33" name="chat_user_pkey">
       <ObjectId>24665</ObjectId>
       <StateNumber>1954</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="43" parent="33" name="chat_user_pkey">
+    <key id="44" parent="33" name="chat_user_pkey">
       <ObjectId>24666</ObjectId>
       <StateNumber>1954</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>chat_user_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="44" parent="34" name="id">
+    <column id="45" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -286,25 +292,25 @@ sequence|table|24696|24691|1
       <DefaultExpression>nextval(&apos;lab_user_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="45" parent="35" name="sender_name">
+    <column id="46" parent="35" name="sender_name">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>2022</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="46" parent="35" name="text">
+    <column id="47" parent="35" name="text">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <StateNumber>1581</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="47" parent="35" name="date">
+    <column id="48" parent="35" name="date">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>1997</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="48" parent="35" name="id">
+    <column id="49" parent="35" name="id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -312,20 +318,20 @@ sequence|table|24696|24691|1
       <DefaultExpression>nextval(&apos;message_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <index id="49" parent="35" name="message_pkey">
+    <index id="50" parent="35" name="message_pkey">
       <ObjectId>24674</ObjectId>
       <StateNumber>2022</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="50" parent="35" name="message_pkey">
+    <key id="51" parent="35" name="message_pkey">
       <ObjectId>24675</ObjectId>
       <StateNumber>1986</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>message_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="51" parent="36" name="id">
+    <column id="52" parent="36" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -333,25 +339,25 @@ sequence|table|24696|24691|1
       <DefaultExpression>nextval(&apos;products_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="52" parent="36" name="name">
+    <column id="53" parent="36" name="name">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>2304</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="53" parent="36" name="price">
+    <column id="54" parent="36" name="price">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>2304</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="54" parent="36" name="products_pkey">
+    <index id="55" parent="36" name="products_pkey">
       <ObjectId>24694</ObjectId>
       <StateNumber>2304</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="55" parent="36" name="products_pkey">
+    <key id="56" parent="36" name="products_pkey">
       <ObjectId>24695</ObjectId>
       <StateNumber>2304</StateNumber>
       <ColNames>id</ColNames>
