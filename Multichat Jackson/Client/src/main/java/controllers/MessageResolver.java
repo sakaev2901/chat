@@ -99,6 +99,10 @@ public class MessageResolver {
                             menuService.receiveMenu();
                         }
                     }
+                    break;
+                    case "get cart": {
+                        new CartService(client).setCart(serverMessage);
+                    }
                 }
             }
             break;

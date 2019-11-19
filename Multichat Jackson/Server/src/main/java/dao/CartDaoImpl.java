@@ -50,7 +50,7 @@ public class CartDaoImpl {
         }
     }
 
-    public LinkedList<Integer> findAll(Integer user_id) {
+    public LinkedList<Integer> findAll(Integer userId) {
         LinkedList<Integer> products = null;
         Connection connection = null;
         PreparedStatement statement = null;
@@ -58,7 +58,7 @@ public class CartDaoImpl {
             products = new LinkedList<>();
             connection = CONFIG.getConnection();
             statement = connection.prepareStatement(FIND_ALL);
-            statement.setInt(1, user_id);
+            statement.setInt(1, userId);
             ResultSet set = statement.executeQuery();
             while (set.next()) {
                 products.add(set.getInt(2));

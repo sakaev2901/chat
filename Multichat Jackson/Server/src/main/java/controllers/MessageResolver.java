@@ -42,6 +42,7 @@ public class MessageResolver {
         try {
             Payload payload = objectMapper.readValue(jsonRequest, Payload.class);
             String header = payload.getHeader();
+            CartService cartService = new CartService();
             switch (header) {
                 case "Login": {
                     doLogin(payload);
@@ -74,8 +75,19 @@ public class MessageResolver {
                         }
                         break;
                         case "set product to cart": {
-                            CartService cartService = new CartService();
                             cartService.addToCart(jsonRequest, this.user.getId());
+                        }
+                        break;
+                        case "get cart": {
+                            out.println(cartService.getCart(jsonRequest));
+                        }
+                        break;
+                        case "buy cart": {
+                            cartService.buyCart(user.getId());
+                        }
+                        break;
+                        case "clear cart": {
+                            cartService.clearCart(user.getId());
                         }
                     }
                 }

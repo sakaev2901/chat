@@ -23,6 +23,8 @@ public class MenuService {
         } else if(role.equals("user")) {
             if (button == 3) {
                 new ShopService(client).getProducts();
+            } else if(button == 4) {
+                new CartService(client).getCart();
             }
         } else if(role.equals("admin")) {
             if (button == 3) {
