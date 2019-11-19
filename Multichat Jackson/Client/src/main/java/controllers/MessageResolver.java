@@ -5,7 +5,9 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.Message;
 import models.Payload;
+import net.Session;
 import services.*;
+import view.AddingToCartView;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
@@ -25,9 +27,11 @@ public class MessageResolver {
     }
 
     public void resolve(String serverMessage) {
+        MenuService menuService = new MenuService(client);
         ObjectMapper objectMapper = new ObjectMapper();
         Payload<Object> data = null;
         JavaType type = objectMapper.getTypeFactory().constructParametricType(Payload.class, Object.class);
+        Session session = Session.getInstance();
         try {
             data = objectMapper.readValue(serverMessage, type);
         } catch (IOException e) {
@@ -64,7 +68,7 @@ public class MessageResolver {
                     Payload<Boolean> payloadOfLoginStatus = objectMapper.readValue(serverMessage, type);
                     Boolean loginStatus = payloadOfLoginStatus.getPayload();
                     if (loginStatus) {
-                        new MenuService(client).receiveMenu();
+                        menuService.receiveMenu();
                     } else {
                         tokenService.deleteToken();
                         System.err.println("Wrong login or password");
@@ -80,7 +84,22 @@ public class MessageResolver {
             }
             break;
             case "Command": {
-                new ShopService(client).receiveProducts(serverMessage);
+                LinkedHashMap<String, String> commandPayload = (LinkedHashMap<String, String>)data.getPayload();
+                String command = commandPayload.get("command");
+                switch (command) {
+                    case "get products": {
+                        new ShopService(client).receiveProducts(serverMessage);
+                        if (session.getRole().equals("user")) {
+                            AddProductToCartService addProductToCartService = new AddProductToCartService(client);
+                            while (addProductToCartService.addToCart()) {
+
+                            }
+                            menuService.receiveMenu();
+                        } else {
+                            menuService.receiveMenu();
+                        }
+                    }
+                }
             }
             break;
             case "Token": {

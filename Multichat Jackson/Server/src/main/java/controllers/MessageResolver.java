@@ -9,10 +9,7 @@ import models.Product;
 import models.User;
 import org.postgresql.shaded.com.ongres.scram.common.stringprep.StringPreparations;
 import servers.ChatMultiServer;
-import services.LoginService;
-import services.MessageService;
-import services.PaginationService;
-import services.ProductsService;
+import services.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -74,6 +71,11 @@ public class MessageResolver {
                         case "set product": {
                             ProductsService productsService = new ProductsService();
                             productsService.addProduct(jsonRequest);
+                        }
+                        break;
+                        case "set product to cart": {
+                            CartService cartService = new CartService();
+                            cartService.addToCart(jsonRequest, this.user.getId());
                         }
                     }
                 }

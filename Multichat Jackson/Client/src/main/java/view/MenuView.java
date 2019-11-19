@@ -18,6 +18,7 @@ public class MenuView {
             } else {
                 System.out.println("3. Shop");
                 System.out.println("4. Shopping cart");
+                System.out.println("5. Orders");
             }
             System.out.println("0. Logout");
             Integer button = scanner.nextInt();
