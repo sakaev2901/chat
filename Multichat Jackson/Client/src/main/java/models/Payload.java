@@ -1,5 +1,8 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Payload<T> {
     private String header;
     private T payload;
@@ -8,7 +11,8 @@ public class Payload<T> {
 
     }
 
-    public Payload(String header, T payload) {
+    @JsonCreator
+    public Payload(@JsonProperty("header") String header,@JsonProperty("payload") T payload) {
         this.header = header;
         this.payload = payload;
     }

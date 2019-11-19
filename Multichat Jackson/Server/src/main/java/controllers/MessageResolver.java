@@ -11,6 +11,7 @@ import servers.ChatMultiServer;
 import services.LoginService;
 import services.MessageService;
 import services.PaginationService;
+import services.ProductsService;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -64,6 +65,10 @@ public class MessageResolver {
                             getMessages(commandPayload);
                         }
                         break;
+                        case "get products": {
+                            ProductsService productsService = new ProductsService();
+                            out.println(productsService.getProducts());
+                        }
                     }
                 }
                 break;
@@ -79,19 +84,13 @@ public class MessageResolver {
     }
 
     public void doLogin(Payload payload) {
-        LoginService loginService = new LoginService();
+        LoginService loginService = new LoginService(clientSocket);
         this.user = loginService.login((LinkedHashMap<String, String>)payload.getPayload());
-        if (user != null) {
-            out.println("Hello, " + user.getName());
-            System.out.println(user.getId() + " connected");
-        } else {
-            out.println("Wrong password or login");
-        }
     }
 
     public void doMessage(Payload payload) {
         MessageService messageService = new MessageService();
-        messageService.sendMessage((LinkedHashMap<String, String>)payload.getPayload(), clients, user);
+        messageService.sendMessage((LinkedHashMap<String, String>)payload.getPayload(), clients, this.user);
     }
 
     public void getMessages(LinkedHashMap commandPayload) {

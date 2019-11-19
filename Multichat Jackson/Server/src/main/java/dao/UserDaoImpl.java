@@ -39,6 +39,7 @@ public class UserDaoImpl implements UserDao<User> {
                 user.setAuthData(authData);
                 user.setName(set.getString("name"));
                 user.setId(set.getInt("id"));
+                user.setRole(set.getString("role"));
             }
             return user;
         } catch (SQLException e) {

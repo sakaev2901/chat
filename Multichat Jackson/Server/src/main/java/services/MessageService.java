@@ -1,5 +1,6 @@
 package services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dao.MessageDaoImpl;
 import models.Message;
 import models.Payload;
@@ -21,10 +22,16 @@ public class MessageService {
             userMessage.setTimeStamp(message.get("timeStamp"));
             MessageDaoImpl messageDao = new MessageDaoImpl();
             messageDao.save(userMessage);
+            Payload<Message> messagePayload = new Payload<>();
+            messagePayload.setHeader("Message");
+            messagePayload.setPayload(userMessage);
+            String jacksonMessage = new ObjectMapper().writeValueAsString(messagePayload);
             for (ChatMultiServer.ClientHandler client:
                     clients) {
                 PrintWriter out = new PrintWriter(client.getClientSocket().getOutputStream(), true);
-                out.println(userMessage.getTimeStamp() + " " + "<"+userMessage.getSenderName() + ">: " + userMessage.getText() );
+//                out.println(userMessage.getTimeStamp() + " " + "<"+userMessage.getSenderName() + ">: " + userMessage.getText() );
+//                  out.println("{\"header\":\"Message\",\"payload\":{\"senderName\":\"Eldar\",\"text\":\"Ainur pimodor\",\"timeStamp\":\"2019.11.13_08:42:39\"}}");
+                out.println(jacksonMessage);
             }
         } catch (Exception e) {
             throw new IllegalStateException(e);

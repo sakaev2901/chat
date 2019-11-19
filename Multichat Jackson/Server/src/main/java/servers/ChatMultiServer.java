@@ -1,6 +1,7 @@
 package servers;
 
 import controllers.MessageResolver;
+import models.Message;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,6 +38,7 @@ public class ChatMultiServer {
     public class ClientHandler extends Thread {
         private Socket clientSocket;
         private BufferedReader in;
+        MessageResolver messageResolver;
 
         ClientHandler(Socket socket) {
             this.clientSocket = socket;
@@ -48,23 +50,9 @@ public class ChatMultiServer {
             try {
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 String inputLine;
-                MessageResolver payloadController = new MessageResolver(clientSocket, clients, this);
+                this.messageResolver = new MessageResolver(clientSocket, clients, this);
                 while (!clientSocket.isClosed() &&(inputLine = in.readLine()) != null) {
-//                    if(".".equals(inputLine)) {
-//                        for (ClientHandler client:
-//                             clients) {
-//                            PrintWriter out = new PrintWriter(client.clientSocket.getOutputStream());
-//                            out.println("bye");
-//                        }
-//                        break;
-//                    } else  {
-//                        for (ClientHandler client:
-//                             clients) {
-//                            PrintWriter out = new PrintWriter(client.clientSocket.getOutputStream(), true);
-//                            out.println(inputLine);
-//                        }
-//                    }
-                    payloadController.handleRequest(inputLine);
+                    messageResolver.handleRequest(inputLine);
                 }
                 in.close();
                 clientSocket.close();

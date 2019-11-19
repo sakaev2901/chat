@@ -4,9 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Message {
-    private String  senderName;
     private String text;
     private String timeStamp;
+    private String  senderName;
     private Integer id;
 
     public Message() {

@@ -1,6 +1,8 @@
 package clients;
 
 import controllers.MenuController;
+import controllers.MessageResolver;
+import services.LoginService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,15 +14,15 @@ public class SocketClient {
     private Socket clientSocket;
     private PrintWriter out;
     private BufferedReader in;
-    MenuController menuController;
+    MessageResolver resolver;
 
     public void startConnection(String ip, int port) {
         try {
             clientSocket = new Socket(ip, port);
             out = new PrintWriter(clientSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            menuController = new MenuController(this);
             new Thread(receiverMessageTask).start();
+            resolver = new MessageResolver(this);
         } catch (Exception e) {
             throw new IllegalStateException(e);
         }
@@ -34,7 +36,7 @@ public class SocketClient {
                     String response = in.readLine();
                     if (response != null) {
 //                        System.out.println(response);
-                        menuController.handleResponse(response);
+                        resolver.resolve(response);
 //                        menuController.handleResponse(response);
                     }
                 } catch (IOException e) {
@@ -79,13 +81,5 @@ public class SocketClient {
 
     public void setReceiverMessageTask(Runnable receiverMessageTask) {
         this.receiverMessageTask = receiverMessageTask;
-    }
-
-    public MenuController getMenuController() {
-        return menuController;
-    }
-
-    public void setMenuController(MenuController menuController) {
-        this.menuController = menuController;
     }
 }
