@@ -1,6 +1,7 @@
 package services;
 
 import clients.SocketClient;
+import com.sun.org.apache.xpath.internal.operations.Or;
 import net. Session;
 import view.MenuView;
 
@@ -25,6 +26,8 @@ public class MenuService {
                 new ShopService(client).getProducts();
             } else if(button == 4) {
                 new CartService(client).getCart();
+            } else if(button == 5) {
+                new OrderService(client).getOrders();
             }
         } else if(role.equals("admin")) {
             if (button == 3) {

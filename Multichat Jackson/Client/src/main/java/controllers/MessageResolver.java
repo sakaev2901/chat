@@ -12,6 +12,7 @@ import view.AddingToCartView;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class MessageResolver {
 
@@ -102,6 +103,14 @@ public class MessageResolver {
                     break;
                     case "get cart": {
                         new CartService(client).setCart(serverMessage);
+                    }
+                    break;
+                    case "get orders": {
+                        OrderService orderService = new OrderService(client);
+                        orderService.setOrders(serverMessage);
+                        Scanner scanner = new Scanner(System.in);
+                        scanner.nextLine();
+                        menuService.receiveMenu();
                     }
                 }
             }

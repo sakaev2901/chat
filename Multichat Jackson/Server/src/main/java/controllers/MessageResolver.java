@@ -89,6 +89,11 @@ public class MessageResolver {
                         case "clear cart": {
                             cartService.clearCart(user.getId());
                         }
+                        break;
+                        case "get orders": {
+                            OrderService orderService = new OrderService();
+                            out.println(orderService.getOrders(user.getId()));
+                        }
                     }
                 }
                 break;
