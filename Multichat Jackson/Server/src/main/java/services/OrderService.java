@@ -2,34 +2,36 @@ package services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dao.OrderDaoImpl;
-import dao.ProductDaoImpl;
+import models.Order;
+import repositories.OrderRepositoryImpl;
+import repositories.ProductRepositoryImpl;
 import models.Payload;
 import models.Product;
 
-import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
+import java.util.List;
 
 public class OrderService {
 
 
     public String getOrders(Integer userId) {
-        OrderDaoImpl orderDao = new OrderDaoImpl();
-        ProductDaoImpl productDao = new ProductDaoImpl();
-        ArrayList<Product> products = null;
-        ArrayList<HashMap<String, Object>> orders = orderDao.findAll(userId);
-        for (HashMap<String, Object> data:
+        OrderRepositoryImpl orderDao = new OrderRepositoryImpl();
+        ProductRepositoryImpl productDao = new ProductRepositoryImpl();
+        List<Product> products = null;
+        List<Order> orders = orderDao.findAllByUserId(userId);
+        for (Order order:
              orders) {
-            ArrayList<Integer> productsId = (ArrayList<Integer>)data.get("products");
-            products = new ArrayList<>();
-            for (Integer id:
-                 productsId) {
-                products.add(productDao.findById(id));
+            products = order.getProducts();
+            for (Product product:
+                 products) {
+                Product newProduct = productDao
+                        .findById(product.getId())
+                        .orElseThrow(() -> new IllegalStateException(String.valueOf(product.getId())));
+                product.setPrice(newProduct.getPrice());
+                product.setName(newProduct.getName());
             }
-            data.put("products", products);
         }
         Payload<LinkedHashMap<String, Object>> payload = new Payload<>();
         payload.setHeader("Command");

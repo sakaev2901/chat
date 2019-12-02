@@ -13,9 +13,8 @@ public class OrdersView {
              data) {
             i++;
             LinkedHashMap<String, Object> mapItem = (LinkedHashMap<String, Object>) item;
-            LinkedHashMap<String, String> info = (LinkedHashMap<String, String>)mapItem.get("info");
             ArrayList<LinkedHashMap<String, String>> products = (ArrayList<LinkedHashMap<String, String>>)mapItem.get("products");
-            System.out.println(i + ". " + info.get("id") + " " + info.get("time"));
+            System.out.println(i + ". " + mapItem.get("id") + " " + mapItem.get("date"));
             for (LinkedHashMap<String, String> product:
                  products) {
                 System.out.println(" - " + String.valueOf(product.get("id")) + " " + product.get("name") + " " + String.valueOf(product.get("price")));

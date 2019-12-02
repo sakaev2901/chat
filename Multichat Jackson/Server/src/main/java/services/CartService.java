@@ -2,9 +2,10 @@ package services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dao.CartDaoImpl;
-import dao.OrderDaoImpl;
-import dao.ProductDaoImpl;
+import models.Cart;
+import repositories.CartDaoImpl;
+import repositories.OrderRepositoryImpl;
+import repositories.ProductRepositoryImpl;
 import models.Payload;
 import models.Product;
 
@@ -44,12 +45,14 @@ public class CartService {
             LinkedHashMap<String, String> payloadMap = (LinkedHashMap<String, String>)payload.getPayload();
             Integer userId = Integer.parseInt(payloadMap.get("id"));
             CartDaoImpl cartDao = new CartDaoImpl();
-            LinkedList<Integer> prodictsId = cartDao.findAll(userId);
-            LinkedList<Product> cart = new LinkedList<>();
-            ProductDaoImpl productDao = new ProductDaoImpl();
-            for (Integer id:
-                 prodictsId) {
-                cart.add(productDao.findById(id));
+            Cart cart = cartDao.findById(userId);
+            ProductRepositoryImpl productDao = new ProductRepositoryImpl();
+            for (Product product:
+                 cart.getProducts()) {
+                Product newProduct = productDao.findById(product.getId())
+                        .orElseThrow(() -> new IllegalStateException());
+                product.setName(newProduct.getName());
+                product.setPrice(newProduct.getPrice());
             }
             Payload<LinkedHashMap<String, Object>> payloadProducts = new Payload<>();
             payload.setHeader("Command");
@@ -69,9 +72,9 @@ public class CartService {
     }
 
     public void buyCart(Integer id) {
-        OrderDaoImpl orderDao = new OrderDaoImpl();
+        OrderRepositoryImpl orderDao = new OrderRepositoryImpl();
         CartDaoImpl cartDao = new CartDaoImpl();
-        orderDao.save(id, cartDao.findAll(id));
+        orderDao.saveUsersOrder(id, cartDao.findById(id));
         clearCart(id);
     }
 

@@ -1,14 +1,14 @@
 package services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dao.MessageDaoImpl;
 import models.Message;
 import models.Payload;
 import models.User;
+import repositories.MessageRepository;
+import repositories.MessageRepositoryImpl;
 import servers.ChatMultiServer;
 
 import java.io.PrintWriter;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -20,8 +20,8 @@ public class MessageService {
             userMessage.setSenderName(user.getName());
             userMessage.setText(message.get("text"));
             userMessage.setTimeStamp(message.get("timeStamp"));
-            MessageDaoImpl messageDao = new MessageDaoImpl();
-            messageDao.save(userMessage);
+            MessageRepository messageRepository = new MessageRepositoryImpl();
+            messageRepository.save(userMessage);
             Payload<Message> messagePayload = new Payload<>();
             messagePayload.setHeader("Message");
             messagePayload.setPayload(userMessage);

@@ -42,9 +42,11 @@ public class CartService {
         JavaType type = objectMapper.getTypeFactory().constructParametricType(Payload.class, LinkedHashMap.class);
         try {
             Payload<LinkedHashMap<String, Object>> payload = objectMapper.readValue(jsonPayload, type);
-            ArrayList<LinkedHashMap<String, LinkedHashMap<String, String>>> cart = (ArrayList<LinkedHashMap<String, LinkedHashMap<String, String>>>)payload.getPayload().get("cart");
+            LinkedHashMap<String, LinkedHashMap<String, Object>> cart = (LinkedHashMap<String, LinkedHashMap<String, Object>>)payload.getPayload().get("cart");
+            Object o = cart.get("products");
+            ArrayList<LinkedHashMap<String, LinkedHashMap<String, String>>> products = (ArrayList<LinkedHashMap<String, LinkedHashMap<String, String>>>)o;
             CartView cartView = new CartView();
-            String responce = cartView.openCart(cart);
+            String responce = cartView.openCart(products);
             MenuService menuService = new MenuService(client);
             if (responce != null) {
                 client.sendMessage(responce);

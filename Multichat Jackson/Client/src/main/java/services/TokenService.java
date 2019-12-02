@@ -22,7 +22,7 @@ public class TokenService {
         try {
             payloadToken = objectMapper.readValue(request, type);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new IllegalStateException(e);
         }
         String token = payloadToken.getPayload();
         try {

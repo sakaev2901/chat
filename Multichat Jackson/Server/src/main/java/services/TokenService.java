@@ -6,22 +6,20 @@ import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.gen.RSAKeyGenerator;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
-import dao.UserDaoImpl;
-import models.TokenData;
+import repositories.UsersRepositoryImpl;
 import models.User;
 
 import java.text.ParseException;
 
 public class TokenService {
     public String getToken(Integer id, String role) throws JOSEException {
-        UserDaoImpl userDao = new UserDaoImpl();
+        UsersRepositoryImpl userDao = new UsersRepositoryImpl();
         RSAKey rsaKey = new RSAKeyGenerator(2048).keyID(role + id).generate();
         RSAKey rsaKeyPublic = rsaKey.toPublicJWK();
         userDao.updateVerifier(rsaKeyPublic.toString(), id);
         System.out.println(rsaKeyPublic);
         JWSSigner signer = new RSASSASigner(rsaKey);
         //jackson token data
-        TokenData tokenData = new TokenData(id, role);
         JWTClaimsSet claimsSet = new JWTClaimsSet.Builder().claim("id", id).claim("role", role).build();
         SignedJWT jwsObject = new SignedJWT(new JWSHeader.Builder(JWSAlgorithm.RS256).keyID(rsaKey.getKeyID()).build(), claimsSet);
         jwsObject.sign(signer);
@@ -30,7 +28,7 @@ public class TokenService {
 
     public User parse(String userToken) {
         User user = null;
-        UserDaoImpl userDao = new UserDaoImpl();
+        UsersRepositoryImpl userDao = new UsersRepositoryImpl();
         try {
             SignedJWT signedJWT = SignedJWT.parse(userToken);
             JWTClaimsSet claimsSet = signedJWT.getJWTClaimsSet();
@@ -46,7 +44,8 @@ public class TokenService {
             }
             try {
                 if (signedJWT.verify(verifier)) {
-                    user = userDao.findUserById(id);
+                    user = userDao.findById(id)
+                                        .orElseThrow(IllegalStateException::new);
                 }
             } catch (JOSEException e) {
                 //ignore

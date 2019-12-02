@@ -4,7 +4,7 @@ package services;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nimbusds.jose.JOSEException;
-import dao.UserDaoImpl;
+import repositories.UsersRepositoryImpl;
 import models.Payload;
 import models.User;
 
@@ -22,7 +22,7 @@ public class LoginService {
     }
 
     public User login(LinkedHashMap<String, String> authData) {
-        UserDaoImpl userDao = new UserDaoImpl();
+        UsersRepositoryImpl userDao = new UsersRepositoryImpl();
         User user = null;
         if (authData.get("token") != null) {
             String userToken = authData.get("token");
