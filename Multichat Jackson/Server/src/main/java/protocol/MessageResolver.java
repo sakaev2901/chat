@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import models.Payload;
 import models.User;
 import servers.ChatMultiServer;
+import servers.ClientHandler;
 import services.*;
 
 import java.io.IOException;
@@ -17,83 +18,89 @@ public class MessageResolver {
 
 //    private Socket clientSocket;
 //    private PrintWriter out;
-    private User user;
+//    private User user;
 //    private List<ChatMultiServer.ClientHandler> clients;
-//    private ChatMultiServer.ClientHandler client;
+    private ClientHandler clientHandler;
 
-    public MessageResolver() {
+    public MessageResolver(ClientHandler clientHandler) {
+        this.clientHandler = clientHandler;
     }
 
     public void handleRequest(String jsonRequest) {
+        Request request = new Request(jsonRequest);
+//        MessageService messageService = new MessageServiceImpl();
+//        clientHandler.sendMessage(Response.build(messageService.sendMessage(request)));
+        LoginService loginService = new LoginServiceImpl();
+
 //        ObjectMapper objectMapper = new ObjectMapper();
-        try {
+//        try {
 //            Payload payload = objectMapper.readValue(jsonRequest, Payload.class);
 //            String header = payload.getHeader();
-            CartServiceImpl cartService = new CartServiceImpl();
-            switch (header) {
-                case "Login": {
+//            CartServiceImpl cartService = new CartServiceImpl();
+//            switch (header) {
+//                case "Login": {
 //                    doLogin(payload);
-                }
-                break;
-                case "Logout": {
+//                }
+//                break;
+//                case "Logout": {
 //                    doLogout(payload);
-                }
-                break;
-                case "Message": {
+//                }
+//                break;
+//                case "Message": {
 //                    doMessage(payload);
-                }
-                break;
-                case "Command": {
-                    LinkedHashMap<String, String> commandPayload = (LinkedHashMap<String, String>)payload.getPayload();
-                    String command = commandPayload.get("command");
-                    switch (command) {
-                        case "get messages": {
+//                }
+//                break;
+//                case "Command": {
+//                    LinkedHashMap<String, String> commandPayload = (LinkedHashMap<String, String>)payload.getPayload();
+//                    String command = commandPayload.get("command");
+//                    switch (command) {
+//                        case "get messages": {
 //                            getMessages(commandPayload);
-                        }
-                        break;
-                        case "get products": {
-                            ProductsServiceImpl productsService = new ProductsServiceImpl();
+//                        }
+//                        break;
+//                        case "get products": {
+//                            ProductsServiceImpl productsService = new ProductsServiceImpl();
 //                            out.println(productsService.getProducts());
-                        }
-                        break;
-                        case "set product": {
-                            ProductsServiceImpl productsService = new ProductsServiceImpl();
-                            productsService.addProduct(jsonRequest);
-                        }
-                        break;
-                        case "set product to cart": {
-                            cartService.addToCart(jsonRequest, this.user.getId());
-                        }
-                        break;
-                        case "get cart": {
+//                        }
+//                        break;
+//                        case "set product": {
+//                            ProductsServiceImpl productsService = new ProductsServiceImpl();
+//                            productsService.addProduct(jsonRequest);
+//                        }
+//                        break;
+//                        case "set product to cart": {
+//                            cartService.addToCart(jsonRequest, this.user.getId());
+//                        }
+//                        break;
+//                        case "get cart": {
 //                            out.println(cartService.getCart(jsonRequest));
-                        }
-                        break;
-                        case "buy cart": {
-                            cartService.buyCart(user.getId());
-                        }
-                        break;
-                        case "clear cart": {
-                            cartService.clearCart(user.getId());
-                        }
-                        break;
-                        case "get orders": {
-                            OrderServiceImpl orderService = new OrderServiceImpl();
+//                        }
+//                        break;
+//                        case "buy cart": {
+//                            cartService.buyCart(user.getId());
+//                        }
+//                        break;
+//                        case "clear cart": {
+//                            cartService.clearCart(user.getId());
+//                        }
+//                        break;
+//                        case "get orders": {
+//                            OrderServiceImpl orderService = new OrderServiceImpl();
 //                            out.println(orderService.getOrders(user.getId()));
-                        }
-                    }
-                }
-                break;
-            }
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
-    }
+//                        }
+//                    }
+//                }
+//                break;
+//            }
+//        } catch (IOException e) {
+//            throw new IllegalStateException(e);
+//        }
+//    }
 
-    private void doLogout(Payload payload) {
+//    private void doLogout(Payload payload) {
 //        clients.remove(client);
-        System.out.println(user.getId() + " disconnected");
-    }
+//        System.out.println(user.getId() + " disconnected");
+//    }
 
 //    public void doLogin(Payload payload) {
 //        LoginServiceImpl loginService = new LoginServiceImpl(clientSocket);
@@ -111,4 +118,8 @@ public class MessageResolver {
 //        Integer size = Integer.parseInt((String) commandPayload.get("size"));
 //        out.println(paginationService.getMessages(page, size));
 //    }
+
+    }
+
+
 }
