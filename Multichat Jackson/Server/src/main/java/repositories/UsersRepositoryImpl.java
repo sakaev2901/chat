@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class UsersRepositoryImpl implements UsersRepository<User> {
+public class UsersRepositoryImpl implements UsersRepository {
 
     private final ConnectionConfig CONFIG =ConnectionConfig.getInstance();
     private final String FIND_BY_MAIL_AND_PASSWORD = "SELECT * FROM chat_user WHERE \"mail\"=?";
@@ -121,7 +121,7 @@ public class UsersRepositoryImpl implements UsersRepository<User> {
         }
     }
 
-    public Optional<User> findById(Integer id) {
+    public Optional findById(Integer id) {
         Connection connection = null;
         PreparedStatement statement = null;
         User user = null;

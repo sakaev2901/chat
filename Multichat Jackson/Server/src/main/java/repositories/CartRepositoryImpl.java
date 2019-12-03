@@ -2,7 +2,6 @@ package repositories;
 
 import config.ConnectionConfig;
 import models.Cart;
-import models.Order;
 import models.Product;
 
 import java.sql.Connection;
@@ -10,10 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
-public class CartDaoImpl {
+public class CartRepositoryImpl implements CartRepository{
     private final ConnectionConfig CONFIG = ConnectionConfig.getInstance();
 
 
@@ -54,7 +53,17 @@ public class CartDaoImpl {
         }
     }
 
-    public Cart findById(Integer userId) {
+    @Override
+    public void save(Cart model) {
+
+    }
+
+    @Override
+    public List<Cart> findAll() {
+        return null;
+    }
+
+    public Optional<Cart> findById(Integer userId) {
         Cart cart = new Cart();
         List<Product> products = null;
         Connection connection = null;
@@ -71,7 +80,7 @@ public class CartDaoImpl {
                 products.add(product);
             }
             cart.setProducts(products);
-            return cart;
+            return Optional.of(cart);
         } catch (SQLException e) {
             throw new IllegalStateException(e);
         } finally {

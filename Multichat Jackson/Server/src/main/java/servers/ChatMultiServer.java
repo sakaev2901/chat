@@ -15,7 +15,7 @@ public class ChatMultiServer {
     private List<ClientHandler> clients;
 
     public ChatMultiServer() {
-        clients = new CopyOnWriteArrayList<ClientHandler>(); // ????
+        clients = new CopyOnWriteArrayList<>();
     }
 
     public void start(int port) {
@@ -64,18 +64,6 @@ public class ChatMultiServer {
 
         public Socket getClientSocket() {
             return clientSocket;
-        }
-
-        public void setClientSocket(Socket clientSocket) {
-            this.clientSocket = clientSocket;
-        }
-
-        public BufferedReader getIn() {
-            return in;
-        }
-
-        public void setIn(BufferedReader in) {
-            this.in = in;
         }
     }
 }

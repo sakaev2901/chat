@@ -2,19 +2,14 @@ package controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import javafx.scene.shape.StrokeLineCap;
-import models.Message;
 import models.Payload;
-import models.Product;
 import models.User;
-import org.postgresql.shaded.com.ongres.scram.common.stringprep.StringPreparations;
 import servers.ChatMultiServer;
 import services.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.sql.PreparedStatement;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -42,7 +37,7 @@ public class MessageResolver {
         try {
             Payload payload = objectMapper.readValue(jsonRequest, Payload.class);
             String header = payload.getHeader();
-            CartService cartService = new CartService();
+            CartServiceImpl cartService = new CartServiceImpl();
             switch (header) {
                 case "Login": {
                     doLogin(payload);
@@ -65,12 +60,12 @@ public class MessageResolver {
                         }
                         break;
                         case "get products": {
-                            ProductsService productsService = new ProductsService();
+                            ProductsServiceImpl productsService = new ProductsServiceImpl();
                             out.println(productsService.getProducts());
                         }
                         break;
                         case "set product": {
-                            ProductsService productsService = new ProductsService();
+                            ProductsServiceImpl productsService = new ProductsServiceImpl();
                             productsService.addProduct(jsonRequest);
                         }
                         break;
@@ -91,7 +86,7 @@ public class MessageResolver {
                         }
                         break;
                         case "get orders": {
-                            OrderService orderService = new OrderService();
+                            OrderServiceImpl orderService = new OrderServiceImpl();
                             out.println(orderService.getOrders(user.getId()));
                         }
                     }
@@ -109,17 +104,17 @@ public class MessageResolver {
     }
 
     public void doLogin(Payload payload) {
-        LoginService loginService = new LoginService(clientSocket);
+        LoginServiceImpl loginService = new LoginServiceImpl(clientSocket);
         this.user = loginService.login((LinkedHashMap<String, String>)payload.getPayload());
     }
 
     public void doMessage(Payload payload) {
-        MessageService messageService = new MessageService();
+        MessageServiceImpl messageService = new MessageServiceImpl();
         messageService.sendMessage((LinkedHashMap<String, String>)payload.getPayload(), clients, this.user);
     }
 
     public void getMessages(LinkedHashMap commandPayload) {
-        PaginationService paginationService = new PaginationService();
+        PaginationServiceImpl paginationService = new PaginationServiceImpl();
         Integer page = Integer.parseInt((String) commandPayload.get("page"));
         Integer size = Integer.parseInt((String) commandPayload.get("size"));
         out.println(paginationService.getMessages(page, size));
