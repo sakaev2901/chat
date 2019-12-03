@@ -36,7 +36,7 @@ public class MessageResolver {
                 }
                 break;
                 case "Logout": {
-                    doLogout(payload);
+//                    doLogout(payload);
                 }
                 break;
                 case "Message": {
