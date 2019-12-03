@@ -1,4 +1,4 @@
-package controllers;
+package protocol;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -15,32 +15,24 @@ import java.util.List;
 
 public class MessageResolver {
 
-    private Socket clientSocket;
-    private PrintWriter out;
+//    private Socket clientSocket;
+//    private PrintWriter out;
     private User user;
-    private List<ChatMultiServer.ClientHandler> clients;
-    private ChatMultiServer.ClientHandler client;
+//    private List<ChatMultiServer.ClientHandler> clients;
+//    private ChatMultiServer.ClientHandler client;
 
-    public MessageResolver(Socket clientSocket, List<ChatMultiServer.ClientHandler> clients, ChatMultiServer.ClientHandler client) {
-        try {
-            this.clientSocket = clientSocket;
-            this.clients = clients;
-            this.out = new PrintWriter(clientSocket.getOutputStream(), true);
-            this.client = client;
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
+    public MessageResolver() {
     }
 
     public void handleRequest(String jsonRequest) {
-        ObjectMapper objectMapper = new ObjectMapper();
+//        ObjectMapper objectMapper = new ObjectMapper();
         try {
-            Payload payload = objectMapper.readValue(jsonRequest, Payload.class);
-            String header = payload.getHeader();
+//            Payload payload = objectMapper.readValue(jsonRequest, Payload.class);
+//            String header = payload.getHeader();
             CartServiceImpl cartService = new CartServiceImpl();
             switch (header) {
                 case "Login": {
-                    doLogin(payload);
+//                    doLogin(payload);
                 }
                 break;
                 case "Logout": {
@@ -48,7 +40,7 @@ public class MessageResolver {
                 }
                 break;
                 case "Message": {
-                    doMessage(payload);
+//                    doMessage(payload);
                 }
                 break;
                 case "Command": {
@@ -56,12 +48,12 @@ public class MessageResolver {
                     String command = commandPayload.get("command");
                     switch (command) {
                         case "get messages": {
-                            getMessages(commandPayload);
+//                            getMessages(commandPayload);
                         }
                         break;
                         case "get products": {
                             ProductsServiceImpl productsService = new ProductsServiceImpl();
-                            out.println(productsService.getProducts());
+//                            out.println(productsService.getProducts());
                         }
                         break;
                         case "set product": {
@@ -74,7 +66,7 @@ public class MessageResolver {
                         }
                         break;
                         case "get cart": {
-                            out.println(cartService.getCart(jsonRequest));
+//                            out.println(cartService.getCart(jsonRequest));
                         }
                         break;
                         case "buy cart": {
@@ -87,7 +79,7 @@ public class MessageResolver {
                         break;
                         case "get orders": {
                             OrderServiceImpl orderService = new OrderServiceImpl();
-                            out.println(orderService.getOrders(user.getId()));
+//                            out.println(orderService.getOrders(user.getId()));
                         }
                     }
                 }
@@ -99,24 +91,24 @@ public class MessageResolver {
     }
 
     private void doLogout(Payload payload) {
-        clients.remove(client);
+//        clients.remove(client);
         System.out.println(user.getId() + " disconnected");
     }
 
-    public void doLogin(Payload payload) {
-        LoginServiceImpl loginService = new LoginServiceImpl(clientSocket);
-        this.user = loginService.login((LinkedHashMap<String, String>)payload.getPayload());
-    }
-
-    public void doMessage(Payload payload) {
-        MessageServiceImpl messageService = new MessageServiceImpl();
-        messageService.sendMessage((LinkedHashMap<String, String>)payload.getPayload(), clients, this.user);
-    }
-
-    public void getMessages(LinkedHashMap commandPayload) {
-        PaginationServiceImpl paginationService = new PaginationServiceImpl();
-        Integer page = Integer.parseInt((String) commandPayload.get("page"));
-        Integer size = Integer.parseInt((String) commandPayload.get("size"));
-        out.println(paginationService.getMessages(page, size));
-    }
+//    public void doLogin(Payload payload) {
+//        LoginServiceImpl loginService = new LoginServiceImpl(clientSocket);
+//        this.user = loginService.login((LinkedHashMap<String, String>)payload.getPayload());
+//    }
+//
+//    public void doMessage(Payload payload) {
+//        MessageServiceImpl messageService = new MessageServiceImpl();
+//        messageService.sendMessage((LinkedHashMap<String, String>)payload.getPayload(), clients, this.user);
+//    }
+//
+//    public void getMessages(LinkedHashMap commandPayload) {
+//        PaginationServiceImpl paginationService = new PaginationServiceImpl();
+//        Integer page = Integer.parseInt((String) commandPayload.get("page"));
+//        Integer size = Integer.parseInt((String) commandPayload.get("size"));
+//        out.println(paginationService.getMessages(page, size));
+//    }
 }

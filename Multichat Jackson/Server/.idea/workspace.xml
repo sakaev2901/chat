@@ -2,44 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="793dca8a-d0e1-42c6-9e1f-4cf0a6a994d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/CartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/CartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/LoginServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/MessageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/PaginationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protocol/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protocol/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servers/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/view/OrdersView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/view/OrdersView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/CartDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/CartRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/UsersRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/UsersRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/CommandService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LogoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LogoutServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PaginationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PaginationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ProductsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/MessageResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/MessageResolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/CartDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/UsersRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/UsersRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/UsersRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/CartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/CommandService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/LogoutService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/PaginationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/PaginationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/ProductsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/TokenService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -165,18 +134,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/ProductsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="116">
@@ -189,13 +146,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="98" selection-start-line="98" selection-end-line="99" />
+            <state relative-caret-position="-732">
+              <caret line="46" column="80" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protocol/Response.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -209,15 +175,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="54" column="61" lean-forward="true" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+            <state relative-caret-position="136">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#401#402#0" expanded="true" />
                 <element signature="e#456#457#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+                <element signature="e#993#994#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servers/ClientHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -242,18 +222,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/CrudRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/repositories/UsersRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -265,14 +233,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Optional.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protocol/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+            <state relative-caret-position="374">
+              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding>
-                <element signature="e#2998#2999#0" expanded="true" />
-                <element signature="e#3042#3043#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#991#992#0" expanded="true" />
+                <element signature="e#1033#1034#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -283,8 +252,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -312,8 +281,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/controllers/PayloadController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/TokenData.java" />
@@ -326,7 +293,6 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/ProductDaoImpl.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bd25e8b2-9d8a-40c5-9a80-04a60977f281/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/OrderDaoImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/BaseDao.java" />
@@ -361,13 +327,18 @@
         <option value="$PROJECT_DIR$/src/main/java/repositories/UsersRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servers/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protocol/Responce.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protocol/Request.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="420" />
-    <option name="width" value="987" />
-    <option name="height" value="1092" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-11" />
+    <option name="width" value="980" />
+    <option name="height" value="1091" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -424,6 +395,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="protocol" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="servers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -436,9 +415,9 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575388837461" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575393016824" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Client" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -508,18 +487,18 @@
       <workItem from="1574879555015" duration="4238000" />
       <workItem from="1574912427343" duration="561000" />
       <workItem from="1575301209582" duration="4792000" />
-      <workItem from="1575359543431" duration="5621000" />
+      <workItem from="1575359543431" duration="9755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93262000" />
+    <option name="totallyTimeSpent" value="97396000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <frame x="-7" y="0" width="653" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24858299" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.5177066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -528,7 +507,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.07628524" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.08056042" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47097844" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -579,30 +558,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://bd25e8b2-9d8a-40c5-9a80-04a60977f281/database/java_lab/schema/public/table/message">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/ConnectionConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://bd25e8b2-9d8a-40c5-9a80-04a60977f281/database/java_lab/schema/public/table/user_products_cart">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://bd25e8b2-9d8a-40c5-9a80-04a60977f281/database/java_lab/schema/public/table/products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1007,16 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="98" selection-start-line="98" selection-end-line="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ProgramChatMultiServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1026,12 +971,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="54" column="61" lean-forward="true" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#401#402#0" expanded="true" />
             <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#993#994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servers/ClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protocol/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-732">
+          <caret line="46" column="80" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protocol/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
           </folding>
         </state>
       </provider>
