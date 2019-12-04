@@ -40,7 +40,7 @@ public class OrderService {
         try {
             Payload<LinkedHashMap<String, Object>> payload = objectMapper.readValue(request, type);
             System.out.println();
-            ArrayList<LinkedHashMap<String, Object>> data = (ArrayList<LinkedHashMap<String, Object>>)payload.getPayload().get("data");
+            ArrayList<LinkedHashMap<String, Object>> data = (ArrayList<LinkedHashMap<String, Object>>)payload.getPayload().get("orders");
             OrdersView ordersView = new OrdersView();
             ordersView.openOrders(data);
         } catch (IOException e) {

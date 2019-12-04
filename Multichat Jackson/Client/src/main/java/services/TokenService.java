@@ -15,16 +15,7 @@ import java.text.ParseException;
 import java.util.Scanner;
 
 public class TokenService {
-    public void saveToken(String request) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        JavaType type = objectMapper.getTypeFactory().constructParametricType(Payload.class, String.class);
-        Payload<String> payloadToken = null;
-        try {
-            payloadToken = objectMapper.readValue(request, type);
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
-        String token = payloadToken.getPayload();
+    public void saveToken(String token) {
         try {
             SignedJWT signedJWT =SignedJWT.parse(token);
             JWTClaimsSet tokenSet = signedJWT.getJWTClaimsSet();

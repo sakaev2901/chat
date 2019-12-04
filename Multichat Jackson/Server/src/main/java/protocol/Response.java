@@ -2,8 +2,10 @@ package protocol;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import models.Message;
-import models.Payload;
+import models.*;
+
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 
 public class Response<T> {
 
@@ -17,9 +19,19 @@ public class Response<T> {
 
     private void buildPayload() {
         payload = new Payload();
+        payload.setPayload(data);
         if (data instanceof Message) {
             payload.setHeader("Message");
-            payload.setPayload(data);
+        } else if(data instanceof User) {
+            payload.setHeader("Login");
+        } else if(data instanceof Pagination) {
+            payload.setHeader("messageArchive");
+        } else if(data instanceof ShopList) {
+            payload.setHeader("get products");
+        } else if (data instanceof Cart) {
+            payload.setHeader("get cart");
+        } else if(data instanceof OrderList) {
+            payload.setHeader("get orders");
         }
     }
 
@@ -36,4 +48,11 @@ public class Response<T> {
         }
     }
 
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
 }

@@ -1,25 +1,20 @@
 package protocol;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 
-import models.Payload;
+import context.Component;
 import models.User;
-import servers.ChatMultiServer;
 import servers.ClientHandler;
 import services.*;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.util.LinkedHashMap;
-import java.util.List;
+public class MessageResolver implements Component {
+    private MessageService messageService;
+    private LoginService loginService;
+    private PaginationService paginationService;
+    private ProductService productService;
+    private CartService cartService;
+    private OrderService orderService;
 
-public class MessageResolver {
-
-//    private Socket clientSocket;
-//    private PrintWriter out;
-//    private User user;
-//    private List<ChatMultiServer.ClientHandler> clients;
+    private User user;
     private ClientHandler clientHandler;
 
     public MessageResolver(ClientHandler clientHandler) {
@@ -28,98 +23,113 @@ public class MessageResolver {
 
     public void handleRequest(String jsonRequest) {
         Request request = new Request(jsonRequest);
-//        MessageService messageService = new MessageServiceImpl();
-//        clientHandler.sendMessage(Response.build(messageService.sendMessage(request)));
-        LoginService loginService = new LoginServiceImpl();
-
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        try {
-//            Payload payload = objectMapper.readValue(jsonRequest, Payload.class);
-//            String header = payload.getHeader();
-//            CartServiceImpl cartService = new CartServiceImpl();
-//            switch (header) {
-//                case "Login": {
-//                    doLogin(payload);
-//                }
-//                break;
-//                case "Logout": {
-//                    doLogout(payload);
-//                }
-//                break;
-//                case "Message": {
-//                    doMessage(payload);
-//                }
-//                break;
-//                case "Command": {
-//                    LinkedHashMap<String, String> commandPayload = (LinkedHashMap<String, String>)payload.getPayload();
-//                    String command = commandPayload.get("command");
-//                    switch (command) {
-//                        case "get messages": {
-//                            getMessages(commandPayload);
-//                        }
-//                        break;
-//                        case "get products": {
-//                            ProductsServiceImpl productsService = new ProductsServiceImpl();
-//                            out.println(productsService.getProducts());
-//                        }
-//                        break;
-//                        case "set product": {
-//                            ProductsServiceImpl productsService = new ProductsServiceImpl();
-//                            productsService.addProduct(jsonRequest);
-//                        }
-//                        break;
-//                        case "set product to cart": {
-//                            cartService.addToCart(jsonRequest, this.user.getId());
-//                        }
-//                        break;
-//                        case "get cart": {
-//                            out.println(cartService.getCart(jsonRequest));
-//                        }
-//                        break;
-//                        case "buy cart": {
-//                            cartService.buyCart(user.getId());
-//                        }
-//                        break;
-//                        case "clear cart": {
-//                            cartService.clearCart(user.getId());
-//                        }
-//                        break;
-//                        case "get orders": {
-//                            OrderServiceImpl orderService = new OrderServiceImpl();
-//                            out.println(orderService.getOrders(user.getId()));
-//                        }
-//                    }
-//                }
-//                break;
-//            }
-//        } catch (IOException e) {
-//            throw new IllegalStateException(e);
-//        }
-//    }
-
-//    private void doLogout(Payload payload) {
-//        clients.remove(client);
-//        System.out.println(user.getId() + " disconnected");
-//    }
-
-//    public void doLogin(Payload payload) {
-//        LoginServiceImpl loginService = new LoginServiceImpl(clientSocket);
-//        this.user = loginService.login((LinkedHashMap<String, String>)payload.getPayload());
-//    }
-//
-//    public void doMessage(Payload payload) {
-//        MessageServiceImpl messageService = new MessageServiceImpl();
-//        messageService.sendMessage((LinkedHashMap<String, String>)payload.getPayload(), clients, this.user);
-//    }
-//
-//    public void getMessages(LinkedHashMap commandPayload) {
-//        PaginationServiceImpl paginationService = new PaginationServiceImpl();
-//        Integer page = Integer.parseInt((String) commandPayload.get("page"));
-//        Integer size = Integer.parseInt((String) commandPayload.get("size"));
-//        out.println(paginationService.getMessages(page, size));
-//    }
-
+        String command = request.getCommand();
+        switch (command) {
+            case "Login": {
+//                this.loginService = new LoginServiceImpl();
+                Response response = Response.build(loginService.login(request));
+                user = (User) response.getData();
+                clientHandler.sendMessage(response);
+                break;
+            }
+            case "Message": {
+//                this.messageService = new MessageServiceImpl();
+                clientHandler.sendMessageAllClient(Response.build(messageService.sendMessage(request)));
+                break;
+            }
+            case "get messages": {
+//                this.paginationService = new PaginationServiceImpl();
+                clientHandler.sendMessage(Response.build(paginationService.getMessages(request)));
+                break;
+            }
+            case "set product": {
+//                this.productService = new ProductServiceImpl();
+                productService.addProduct(request);
+                break;
+            }
+            case "set product to cart": {
+//                this.cartService = new CartServiceImpl();
+                cartService.addToCart(request, user.getId());
+                break;
+            }
+            case "get cart": {
+//                this.cartService = new CartServiceImpl();
+                clientHandler.sendMessage(Response.build(cartService.getCart(request)));
+                break;
+            }
+            case "get orders": {
+//                this.orderService = new OrderServiceImpl();
+                clientHandler.sendMessage(Response.build(orderService.getOrders(user.getId())));
+                break;
+            }
+            case "buy cart": {
+//                this.cartService = new CartServiceImpl();
+                cartService.buyCart(user.getId());
+                break;
+            }
+            case "clear cart": {
+//                this.cartService = new CartServiceImpl();
+                cartService.clearCart(user.getId());
+                break;
+            }
+            case "get products": {
+//                this.productService = new ProductServiceImpl();
+                clientHandler.sendMessage(Response.build(productService.getProducts()));
+            }
+        }
     }
 
 
+    public MessageService getMessageService() {
+        return messageService;
+    }
+
+    public void setMessageService(MessageServiceImpl messageService) {
+        this.messageService = messageService;
+    }
+
+    public LoginService getLoginService() {
+        return loginService;
+    }
+
+    public void setLoginService(LoginServiceImpl loginService) {
+        this.loginService = loginService;
+    }
+
+    public PaginationService getPaginationService() {
+        return paginationService;
+    }
+
+    public void setPaginationService(PaginationServiceImpl paginationService) {
+        this.paginationService = paginationService;
+    }
+
+    public ProductService getProductService() {
+        return productService;
+    }
+
+    public void setProductService(ProductServiceImpl productService) {
+        this.productService = productService;
+    }
+
+    public CartService getCartService() {
+        return cartService;
+    }
+
+    public void setCartService(CartServiceImpl cartService) {
+        this.cartService = cartService;
+    }
+
+    public OrderService getOrderService() {
+        return orderService;
+    }
+
+    public void setOrderService(OrderServiceImpl orderService) {
+        this.orderService = orderService;
+    }
+
+    @Override
+    public String getComponentName() {
+        return "messageResolver";
+    }
 }

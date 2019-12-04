@@ -1,5 +1,7 @@
 package servers;
 
+import context.ApplicationContext;
+import context.ApplicationContextReflectionBased;
 import protocol.MessageResolver;
 import protocol.Response;
 
@@ -37,6 +39,8 @@ public class ClientHandler extends Thread {
             String inputLine;
             this.messageResolver = new MessageResolver(this);
             while (!clientSocket.isClosed() &&(inputLine = in.readLine()) != null) {
+                ApplicationContext applicationContext = new ApplicationContextReflectionBased();
+                applicationContext.scan(messageResolver);
                 messageResolver.handleRequest(inputLine);
             }
             in.close();
@@ -48,11 +52,16 @@ public class ClientHandler extends Thread {
     }
 
     public void sendMessage(Response response) {
+        String json = response.toJson();
         out.println(response.toJson());
     }
 
-    private void sendMessageAllClient() {
-
+    public void sendMessageAllClient(Response response) {
+        for (ClientHandler client:
+             clients) {
+            PrintWriter our = client.out;
+            our.println(response.toJson());
+        }
     }
     public Socket getClientSocket() {
         return clientSocket;

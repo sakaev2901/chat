@@ -2,7 +2,11 @@ package services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.org.apache.xpath.internal.operations.Or;
+import context.Component;
 import models.Order;
+import models.OrderList;
+import protocol.Request;
 import repositories.OrderRepository;
 import repositories.OrderRepositoryImpl;
 import repositories.ProductRepository;
@@ -15,10 +19,10 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class OrderServiceImpl implements OrderService{
+public class OrderServiceImpl implements OrderService, Component {
 
 
-    public String getOrders(Integer userId) {
+    public OrderList getOrders(Integer userId) {
         OrderRepository orderRepository = new OrderRepositoryImpl();
         ProductRepository productRepository = new ProductRepositoryImpl();
         List<Product> products = null;
@@ -35,18 +39,13 @@ public class OrderServiceImpl implements OrderService{
                 product.setName(newProduct.getName());
             }
         }
-        Payload<LinkedHashMap<String, Object>> payload = new Payload<>();
-        payload.setHeader("Command");
-        LinkedHashMap<String, Object> mapPayload = new LinkedHashMap<>();
-        mapPayload.put("command", "get orders");
-        mapPayload.put("data", orders);
-        payload.setPayload(mapPayload);
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            String request = objectMapper.writeValueAsString(payload);
-            return request;
-        } catch (JsonProcessingException e) {
-            throw new IllegalStateException(e);
-        }
+        OrderList orderList = new OrderList();
+        orderList.setOrders(orders);
+        return orderList;
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }

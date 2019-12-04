@@ -6,13 +6,14 @@ import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.gen.RSAKeyGenerator;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
+import context.Component;
 import repositories.UsersRepository;
 import repositories.UsersRepositoryImpl;
 import models.User;
 
 import java.text.ParseException;
 
-public class TokenServiceImpl implements TokenService{
+public class TokenServiceImpl implements TokenService, Component {
     public String getToken(Integer id, String role) throws JOSEException {
         UsersRepository usersRepository = new UsersRepositoryImpl();
         RSAKey rsaKey = new RSAKeyGenerator(2048).keyID(role + id).generate();
@@ -46,14 +47,21 @@ public class TokenServiceImpl implements TokenService{
             try {
                 if (signedJWT.verify(verifier)) {
                     user = usersRepository.findById(id)
-                                        .orElseThrow(IllegalStateException::new);
+                                        .orElse(new User());
+                } else {
+                    user = new User();
                 }
             } catch (JOSEException e) {
-                //ignore
+                    user = new User();
             }
             return user;
         } catch (ParseException e) {
-            return null;
+            return new User();
         }
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }

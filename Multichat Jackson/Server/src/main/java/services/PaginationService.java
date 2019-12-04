@@ -1,5 +1,8 @@
 package services;
 
+import models.Pagination;
+import protocol.Request;
+
 public interface PaginationService {
-    String getMessages(Integer page, Integer size);
+    Pagination getMessages(Request request);
 }

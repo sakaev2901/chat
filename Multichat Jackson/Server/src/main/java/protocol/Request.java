@@ -19,6 +19,8 @@ public class Request {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             this.payload = objectMapper.readValue(jsonRequest, Payload.class);
+            this.commandPayload = (LinkedHashMap<String, String>)payload.getPayload();
+
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
@@ -26,7 +28,6 @@ public class Request {
 
     public String getCommand() {
         if (this.payload.getHeader().equals("Command")) {
-            this.commandPayload = (LinkedHashMap<String, String>)payload.getPayload();
             return commandPayload.get("command");
         } else {
             return payload.getHeader();

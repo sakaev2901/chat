@@ -2,7 +2,9 @@ package services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import context.Component;
 import models.Cart;
+import protocol.Request;
 import repositories.*;
 import models.Payload;
 import models.Product;
@@ -11,39 +13,24 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.LinkedHashMap;
 
-public class CartServiceImpl implements CartService{
-    Socket client;
+public class CartServiceImpl implements CartService, Component {
+    private CartRepository cartRepository;
+    private ProductRepository productRepository;
+    private OrderRepository orderRepository;
 
-    public CartServiceImpl(Socket client) {
-        this.client = client;
-    }
 
     public CartServiceImpl() {
 
     }
 
-    public void addToCart(String jsonProduct, Integer userId) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            Payload payload = objectMapper.readValue(jsonProduct, Payload.class);
-            LinkedHashMap<String, String> payloadMap = (LinkedHashMap<String, String>)payload.getPayload();
-            Integer productId = Integer.parseInt(payloadMap.get("id"));
-            CartRepository cartRepository = new CartRepositoryImpl();
+    public void addToCart(Request request, Integer userId) {
+            Integer productId = Integer.parseInt(request.getParameter("id"));
             cartRepository.save(userId, productId);
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
     }
 
-    public String getCart(String jsonRequest) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            Payload payload = objectMapper.readValue(jsonRequest, Payload.class);
-            LinkedHashMap<String, String> payloadMap = (LinkedHashMap<String, String>)payload.getPayload();
-            Integer userId = Integer.parseInt(payloadMap.get("id"));
-            CartRepository cartRepository = new CartRepositoryImpl();
+    public Cart getCart(Request request) {
+            Integer userId = Integer.parseInt(request.getParameter("id"));
             Cart cart = cartRepository.findById(userId).orElseThrow(() -> new IllegalStateException());
-            ProductRepository productRepository = new ProductRepositoryImpl();
             for (Product product:
                  cart.getProducts()) {
                 Product newProduct = productRepository.findById(product.getId())
@@ -51,32 +38,44 @@ public class CartServiceImpl implements CartService{
                 product.setName(newProduct.getName());
                 product.setPrice(newProduct.getPrice());
             }
-            Payload<LinkedHashMap<String, Object>> payloadProducts = new Payload<>();
-            payload.setHeader("Command");
-            LinkedHashMap<String, Object> mapPayload = new LinkedHashMap<>();
-            mapPayload.put("command", "get cart");
-            mapPayload.put("cart", cart);
-            payload.setPayload(mapPayload);
-            try {
-                String jacksonOfProducts = objectMapper.writeValueAsString(payload);
-                return jacksonOfProducts;
-            } catch (JsonProcessingException e) {
-                throw new IllegalStateException(e);
-            }
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
+         return cart;
     }
 
     public void buyCart(Integer id) {
-        OrderRepository orderRepository = new OrderRepositoryImpl();
-        CartRepository cartRepository = new CartRepositoryImpl();
         orderRepository.saveUsersOrder(id, cartRepository.findById(id).orElseThrow(() -> new IllegalStateException()));
         clearCart(id);
     }
 
     public void clearCart(Integer id) {
-        CartRepositoryImpl cartDao = new CartRepositoryImpl();
-        cartDao.deleteByUserId(id);
+        cartRepository.deleteByUserId(id);
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
+    }
+
+    public CartRepository getCartRepository() {
+        return cartRepository;
+    }
+
+    public void setCartRepository(CartRepositoryImpl cartRepository) {
+        this.cartRepository = cartRepository;
+    }
+
+    public ProductRepository getProductRepository() {
+        return productRepository;
+    }
+
+    public void setProductRepository(ProductRepositoryImpl productRepository) {
+        this.productRepository = productRepository;
+    }
+
+    public OrderRepository getOrderRepository() {
+        return orderRepository;
+    }
+
+    public void setOrderRepository(OrderRepositoryImpl orderRepository) {
+        this.orderRepository = orderRepository;
     }
 }

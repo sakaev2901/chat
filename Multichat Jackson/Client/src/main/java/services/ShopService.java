@@ -40,7 +40,7 @@ public class ShopService {
         JavaType type = objectMapper.getTypeFactory().constructParametricType(Payload.class, LinkedHashMap.class);
         try {
             Payload<LinkedHashMap<String, Object>> payload = objectMapper.readValue(responce, type);
-            this.products = (ArrayList<LinkedHashMap<String, LinkedHashMap<String, String>>>)payload.getPayload().get("data");
+            this.products = (ArrayList<LinkedHashMap<String, LinkedHashMap<String, String>>>)payload.getPayload().get("products");
             receiveUsersOrder();
         } catch (IOException e) {
             throw new IllegalStateException(e);

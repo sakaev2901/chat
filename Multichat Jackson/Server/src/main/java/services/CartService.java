@@ -1,8 +1,11 @@
 package services;
 
+import models.Cart;
+import protocol.Request;
+
 public interface CartService {
-    void addToCart(String json, Integer userId);
-    String getCart(String jsonRequest);
+    void addToCart(Request request, Integer userId);
+    Cart getCart(Request request);
     void buyCart(Integer id);
     void clearCart(Integer id);
 }

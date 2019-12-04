@@ -1,6 +1,7 @@
 package services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import context.Component;
 import models.Message;
 import models.Payload;
 import models.User;
@@ -13,7 +14,7 @@ import java.io.PrintWriter;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class MessageServiceImpl implements MessageService{
+public class MessageServiceImpl implements MessageService, Component {
 
     @Override
     public Message sendMessage(Request request) {
@@ -29,4 +30,9 @@ public class MessageServiceImpl implements MessageService{
             throw new IllegalStateException(e);
         }
             }
+
+    @Override
+    public String getComponentName() {
+        return null;
+    }
 }
