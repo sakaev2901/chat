@@ -1,6 +1,7 @@
 package repositories;
 
 import config.ConnectionConfig;
+import context.Component;
 import models.Cart;
 import models.Product;
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class CartRepositoryImpl implements CartRepository{
+public class CartRepositoryImpl implements CartRepository, Component {
     private final ConnectionConfig CONFIG = ConnectionConfig.getInstance();
 
 
@@ -87,5 +88,10 @@ public class CartRepositoryImpl implements CartRepository{
             CONFIG.close(statement);
             CONFIG.close(connection);
         }
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }

@@ -6,6 +6,7 @@ import models.Message;
 import models.Payload;
 import models.User;
 import protocol.Request;
+import repositories.CartRepository;
 import repositories.MessageRepository;
 import repositories.MessageRepositoryImpl;
 import servers.ChatMultiServer;
@@ -16,6 +17,8 @@ import java.util.List;
 
 public class MessageServiceImpl implements MessageService, Component {
 
+    private MessageRepository messageRepository;
+
     @Override
     public Message sendMessage(Request request) {
         try {
@@ -23,8 +26,7 @@ public class MessageServiceImpl implements MessageService, Component {
             userMessage.setSenderName(request.getParameter("senderId"));
             userMessage.setText(request.getParameter("text"));
             userMessage.setTimeStamp(request.getParameter("timeStamp"));
-//            MessageRepository messageRepository = new MessageRepositoryImpl();
-//            messageRepository.save(userMessage);
+            messageRepository.save(userMessage);
             return userMessage;
         } catch (Exception e) {
             throw new IllegalStateException(e);
@@ -34,5 +36,13 @@ public class MessageServiceImpl implements MessageService, Component {
     @Override
     public String getComponentName() {
         return null;
+    }
+
+    public MessageRepository getMessageRepository() {
+        return messageRepository;
+    }
+
+    public void setMessageRepository(MessageRepositoryImpl messageRepository) {
+        this.messageRepository = messageRepository;
     }
 }

@@ -19,16 +19,17 @@ import java.util.LinkedHashMap;
 public class LoginServiceImpl implements LoginService, Component {
 
 
+    private UsersRepository usersRepository;
+    private TokenService tokenService;
+
     public LoginServiceImpl() {
 
     }
 
     public User login(Request request) {
-        UsersRepository usersRepository = new UsersRepositoryImpl();
         User user = null;
         if (request.getParameter("token") != null) {
             String userToken = request.getParameter("token");
-            TokenServiceImpl tokenService = new TokenServiceImpl();
             user = tokenService.parse(userToken);
         } else {
             String mail = request.getParameter("mail");
@@ -36,41 +37,32 @@ public class LoginServiceImpl implements LoginService, Component {
             user = usersRepository.findByMailAndPassword(mail, password);
 
         }
-//        PrintWriter out = null;
-//        try {
-//            out = new PrintWriter(client.getOutputStream(), true);
-//        } catch (IOException e) {
-//            throw new IllegalStateException(e);
-//        }
-//        Payload<Boolean> loginPayload = new Payload();
-//        loginPayload.setHeader("Login");
-//        String loginStatus;
         if (user.getId() != null) {
-//            loginPayload.setPayload(true);
             try {
-//                loginStatus = new ObjectMapper().writeValueAsString(loginPayload);
-//                Payload<String> tokenPayload = new Payload<>();
-//                tokenPayload.setHeader("Token");
-                user.setToken(new TokenServiceImpl().getToken(user.getId(), user.getRole()));
-//                tokenPayload.setPayload(new TokenServiceImpl().getToken(user.getId(), user.getRole()));
-//                String token = new ObjectMapper().writeValueAsString(tokenPayload);
-//                out.println(token);
-//                out.println(loginStatus);
+                user.setToken(tokenService.getToken(user.getId(), user.getRole()));
             } catch ( JOSEException e) {
                 throw new IllegalStateException(e);
             }
             System.out.println(user.getId() + " connected");
-        } else {
-//            loginPayload.setPayload(false);
-//            try {
-//                loginStatus = new ObjectMapper().writeValueAsString(loginPayload);
-//                out.println(loginStatus);
-//            } catch (JsonProcessingException e) {
-//                throw new IllegalStateException(e);
-//            }
-//
         }
         return user;
+    }
+
+
+    public UsersRepository getUsersRepository() {
+        return usersRepository;
+    }
+
+    public void setUsersRepository(UsersRepositoryImpl usersRepository) {
+        this.usersRepository = usersRepository;
+    }
+
+    public TokenService getTokenService() {
+        return tokenService;
+    }
+
+    public void setTokenService(TokenServiceImpl tokenService) {
+        this.tokenService = tokenService;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package repositories;
 
 import config.ConnectionConfig;
+import context.Component;
 import models.AuthData;
 import models.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -15,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class UsersRepositoryImpl implements UsersRepository {
+public class UsersRepositoryImpl implements UsersRepository, Component {
 
     private final ConnectionConfig CONFIG =ConnectionConfig.getInstance();
     private final String FIND_BY_MAIL_AND_PASSWORD = "SELECT * FROM chat_user WHERE \"mail\"=?";
@@ -143,5 +144,10 @@ public class UsersRepositoryImpl implements UsersRepository {
             CONFIG.close(statement);
             CONFIG.close(connection);
         }
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }

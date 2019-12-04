@@ -1,6 +1,7 @@
 package repositories;
 
 import config.ConnectionConfig;
+import context.Component;
 import models.Product;
 
 import java.sql.Connection;
@@ -10,7 +11,7 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.Optional;
 
-public class ProductRepositoryImpl implements ProductRepository {
+public class ProductRepositoryImpl implements ProductRepository, Component {
 
     private final ConnectionConfig CONFIG =ConnectionConfig.getInstance();
     private final String FIND_ALL = "SELECT * FROM products";
@@ -79,5 +80,10 @@ public class ProductRepositoryImpl implements ProductRepository {
             CONFIG.close(statement);
             CONFIG.close(connection);
         }
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }

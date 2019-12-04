@@ -22,9 +22,10 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService, Component {
 
 
+    private OrderRepository orderRepository;
+    private ProductRepository productRepository;
+
     public OrderList getOrders(Integer userId) {
-        OrderRepository orderRepository = new OrderRepositoryImpl();
-        ProductRepository productRepository = new ProductRepositoryImpl();
         List<Product> products = null;
         List<Order> orders = orderRepository.findAllByUserId(userId);
         for (Order order:
@@ -42,6 +43,22 @@ public class OrderServiceImpl implements OrderService, Component {
         OrderList orderList = new OrderList();
         orderList.setOrders(orders);
         return orderList;
+    }
+
+    public OrderRepository getOrderRepository() {
+        return orderRepository;
+    }
+
+    public void setOrderRepository(OrderRepositoryImpl orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+
+    public ProductRepository getProductRepository() {
+        return productRepository;
+    }
+
+    public void setProductRepository(ProductRepositoryImpl productRepository) {
+        this.productRepository = productRepository;
     }
 
     @Override

@@ -2,62 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b75efd60-2599-4cbf-b146-53d43dafc2cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContextReflectionBased.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/context/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/models/OrderList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/models/Pagination.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/models/ShopList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/services/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/MessageArchiveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/MessageArchiveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ShopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/OrdersView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/OrdersView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/MessageResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/MessageResolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/CartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/MessageArchiveService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/MessageArchiveService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/ShopService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/ShopService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/TokenService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/OrdersView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/OrdersView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/token.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/protocol/MessageResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/protocol/MessageResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/protocol/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/protocol/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/protocol/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/protocol/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/servers/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/servers/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/CartRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/CartRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/MessageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/MessageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/OrderRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/OrderRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/ProductRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/UsersRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/UsersRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/LoginServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/PaginationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/PaginationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/PaginationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/PaginationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/ProductsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/TokenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/protocol/MessageResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/protocol/MessageResolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/protocol/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/protocol/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/protocol/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/protocol/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/servers/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/servers/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/CartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/CartRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/CartRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/MessageRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/MessageRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/OrderRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/OrderRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/ProductRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/UsersRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/UsersRepositoryImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/CartServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/LoginService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/LoginServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/MessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/OrderService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/PaginationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/PaginationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/PaginationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/PaginationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/ProductsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/ProductServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/TokenServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -379,7 +348,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575446324279" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575452575501" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -467,7 +436,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100064000" />
+    <option name="totallyTimeSpent" value="101386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />

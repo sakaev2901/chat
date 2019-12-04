@@ -14,8 +14,9 @@ import models.User;
 import java.text.ParseException;
 
 public class TokenServiceImpl implements TokenService, Component {
+    private UsersRepository usersRepository;
+
     public String getToken(Integer id, String role) throws JOSEException {
-        UsersRepository usersRepository = new UsersRepositoryImpl();
         RSAKey rsaKey = new RSAKeyGenerator(2048).keyID(role + id).generate();
         RSAKey rsaKeyPublic = rsaKey.toPublicJWK();
         usersRepository.updateVerifier(rsaKeyPublic.toString(), id);
@@ -30,7 +31,6 @@ public class TokenServiceImpl implements TokenService, Component {
 
     public User parse(String userToken) {
         User user = null;
-        UsersRepository usersRepository = new UsersRepositoryImpl();
         try {
             SignedJWT signedJWT = SignedJWT.parse(userToken);
             JWTClaimsSet claimsSet = signedJWT.getJWTClaimsSet();
@@ -63,5 +63,13 @@ public class TokenServiceImpl implements TokenService, Component {
     @Override
     public String getComponentName() {
         return null;
+    }
+
+    public UsersRepository getUsersRepository() {
+        return usersRepository;
+    }
+
+    public void setUsersRepository(UsersRepositoryImpl usersRepository) {
+        this.usersRepository = usersRepository;
     }
 }

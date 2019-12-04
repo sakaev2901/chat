@@ -15,8 +15,9 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
 public class ProductServiceImpl implements ProductService, Component {
+    private ProductRepository productRepository;
+
     public ShopList getProducts() {
-        ProductRepository productRepository = new ProductRepositoryImpl();
         LinkedList<Product> products = productRepository.findAll();
         ShopList shopList = new ShopList();
         shopList.setProducts(products);
@@ -27,7 +28,6 @@ public class ProductServiceImpl implements ProductService, Component {
             Product product = new Product();
             product.setName(request.getParameter("name"));
             product.setPrice(Integer.parseInt(request.getParameter("price")));
-            ProductRepository productRepository = new ProductRepositoryImpl();
             productRepository.save(product);
 
     }
@@ -35,5 +35,13 @@ public class ProductServiceImpl implements ProductService, Component {
     @Override
     public String getComponentName() {
         return null;
+    }
+
+    public ProductRepository getProductRepository() {
+        return productRepository;
+    }
+
+    public void setProductRepository(ProductRepositoryImpl productRepository) {
+        this.productRepository = productRepository;
     }
 }

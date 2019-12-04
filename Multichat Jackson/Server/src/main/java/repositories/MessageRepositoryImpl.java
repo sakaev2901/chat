@@ -1,6 +1,7 @@
 package repositories;
 
 import config.ConnectionConfig;
+import context.Component;
 import models.Message;
 
 import java.sql.Connection;
@@ -11,7 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
-public class MessageRepositoryImpl implements MessageRepository {
+public class MessageRepositoryImpl implements MessageRepository, Component {
     private final ConnectionConfig CONFIG = ConnectionConfig.getInstance();
     private final String SAVE = "INSERT INTO message (sender_name, text, date) values (?, ?, ?)";
     private final String FIND_ALL_WITH_PAGINATION = "SELECT * FROM message ORDER BY id LIMIT ? OFFSET ?;";
@@ -72,5 +73,10 @@ public class MessageRepositoryImpl implements MessageRepository {
     @Override
     public Optional<Message> findById(Integer integer) {
         return Optional.empty();
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }
