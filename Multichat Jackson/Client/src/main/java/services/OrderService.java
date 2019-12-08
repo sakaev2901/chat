@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.Payload;
+import net.Session;
 import view.OrdersView;
 
 import java.io.IOException;
@@ -24,6 +25,7 @@ public class OrderService {
         payload.setHeader("Command");
         LinkedHashMap<String, String> commandPayload = new LinkedHashMap<>();
         commandPayload.put("command", "get orders");
+        commandPayload.put("id", String.valueOf(Session.getInstance().getId()));
         payload.setPayload(commandPayload);
         ObjectMapper objectMapper = new ObjectMapper();
         try {

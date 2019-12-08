@@ -37,10 +37,11 @@ public class ClientHandler extends Thread {
         try {
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             String inputLine;
-            this.messageResolver = new MessageResolver(this);
+            this.messageResolver = server.getMessageResolver();
+            messageResolver.setClientHandler(this);
             while (!clientSocket.isClosed() &&(inputLine = in.readLine()) != null) {
-                ApplicationContext applicationContext = new ApplicationContextReflectionBased();
-                applicationContext.scan(messageResolver);
+//                ApplicationContext applicationContext = new ApplicationContextReflectionBased();
+//                applicationContext.scan(messageResolver);
                 messageResolver.handleRequest(inputLine);
             }
             in.close();

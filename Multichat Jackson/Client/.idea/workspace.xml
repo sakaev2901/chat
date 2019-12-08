@@ -2,32 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b75efd60-2599-4cbf-b146-53d43dafc2cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/AddingToCartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AddingToCartView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/CartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CartView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/token.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/CartRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/CartRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/MessageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/MessageRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/OrderRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/OrderRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/ProductRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/UsersRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/UsersRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/ProgramChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/ProgramChatMultiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContextReflectionBased.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContextReflectionBased.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/protocol/MessageResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/protocol/MessageResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/servers/ChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/servers/ChatMultiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/servers/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/servers/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/PaginationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/PaginationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/TokenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/CartRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/CartRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/MessageRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/MessageRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/OrderRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/OrderRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/ProductRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/UsersRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/UsersRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/context/ApplicationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/context/ApplicationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/context/ApplicationContextReflectionBased.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/context/ApplicationContextReflectionBased.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/protocol/MessageResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/protocol/MessageResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/servers/ChatMultiServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/servers/ChatMultiServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/servers/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/servers/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/CartService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/CartServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/MessageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/OrderService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/PaginationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/PaginationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/TokenServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="190">
+              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/CartService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+            <state relative-caret-position="-4">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#459#460#0" expanded="true" />
@@ -81,8 +79,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/CartView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="41" column="61" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="61" />
+            <state relative-caret-position="74">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/AddingToCartView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="33" column="89" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/ShopService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="20">
               <caret line="42" column="122" selection-start-line="42" selection-start-column="122" selection-end-line="42" selection-end-column="122" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -116,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="159">
+              <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,7 +147,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="179">
@@ -146,26 +156,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="14">
+              <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
-              <folding>
-                <element signature="e#13573#13574#0" expanded="true" />
-                <element signature="e#13658#13659#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -192,6 +189,10 @@
       <find>openadd</find>
       <find>JavaType</find>
       <find>getTo</find>
+      <find>clea</find>
+      <find>set pr</find>
+      <find>get ca</find>
+      <find>set p</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -234,11 +235,9 @@
         <option value="$PROJECT_DIR$/src/main/java/view/ShopView.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AddingProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AddProductToCartService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/AddingToCartView.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/MenuView.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/ShoppingCartView.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/ShoppingCartService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/CartView.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/MenuService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/services/TokenService.java" />
@@ -247,8 +246,10 @@
         <option value="$PROJECT_DIR$/token.txt" />
         <option value="$PROJECT_DIR$/src/main/java/services/CartService.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/OrdersView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/CartView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/AddingToCartView.java" />
       </list>
     </option>
   </component>
@@ -268,10 +269,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="949" />
-    <option name="width" value="980" />
-    <option name="height" value="1091" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="948" />
+    <option name="width" value="981" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -348,7 +349,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575452575501" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575473989328" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -436,13 +437,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101386000" />
+    <option name="totallyTimeSpent" value="105064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14251012" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14251012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -451,7 +452,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.37976784" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.37976784" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39800996" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -538,7 +539,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/services/OrderService.java</url>
-          <line>37</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
@@ -555,10 +556,16 @@
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/services/CartService.java</url>
-          <line>45</line>
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java</url>
+          <line>95</line>
           <properties />
-          <option name="timeStamp" value="48" />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/services/CartService.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -795,16 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddingToCartView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/AddingProductService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -877,70 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/CartView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="41" column="61" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ShopService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="42" column="122" selection-start-line="42" selection-start-column="122" selection-end-line="42" selection-end-column="122" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/OrdersView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -955,6 +888,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ShopService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="42" column="122" selection-start-line="42" selection-start-column="122" selection-end-line="42" selection-end-column="122" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/CartView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddingToCartView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="33" column="89" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/CartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,8 +4,8 @@ import models.Cart;
 import protocol.Request;
 
 public interface CartService {
-    void addToCart(Request request, Integer userId);
+    void addToCart(Request request);
     Cart getCart(Request request);
-    void buyCart(Integer id);
-    void clearCart(Integer id);
+    void buyCart(Request request);
+    void clearCart(Request request);
 }

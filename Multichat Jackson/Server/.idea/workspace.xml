@@ -3,31 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="793dca8a-d0e1-42c6-9e1f-4cf0a6a994d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/view/AddingToCartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/view/AddingToCartView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/view/CartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/view/CartView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/target/classes/services/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/services/OrderService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/token.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/CartRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/CartRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/MessageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/MessageRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/OrderRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/OrderRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/ProductRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/UsersRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/UsersRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProgramChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProgramChatMultiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/context/ApplicationContextReflectionBased.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/ApplicationContextReflectionBased.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servers/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servers/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PaginationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PaginationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/CartRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/CartRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/MessageRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/MessageRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/OrderRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/OrderRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/ProductRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/UsersRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/UsersRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/CartServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/MessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/PaginationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/PaginationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/TokenServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -153,35 +143,37 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="1734">
+              <caret line="126" column="45" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2524#2525#0" expanded="true" />
-                <element signature="e#2562#2563#0" expanded="true" />
-                <element signature="e#2633#2634#0" expanded="true" />
-                <element signature="e#2687#2688#0" expanded="true" />
+                <element signature="e#3707#3708#0" expanded="true" />
+                <element signature="e#3772#3773#0" expanded="true" />
+                <element signature="e#3822#3823#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ProgramChatMultiServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="110" lean-forward="true" selection-start-line="7" selection-start-column="110" selection-end-line="7" selection-end-column="110" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/LoginServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/context/ApplicationContextReflectionBased.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="289">
+              <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,73 +182,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/CartRepositoryImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="20" />
+            <state relative-caret-position="141">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2973#2974#0" expanded="true" />
-                <element signature="e#3000#3001#0" expanded="true" />
+                <element signature="e#2524#2525#0" expanded="true" />
+                <element signature="e#2562#2563#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/MessageRepositoryImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/context/ApplicationContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="20" />
-              <folding>
-                <element signature="e#2454#2455#0" expanded="true" />
-                <element signature="e#2481#2482#0" expanded="true" />
-                <element signature="e#2553#2554#0" expanded="true" />
-                <element signature="e#2592#2593#0" expanded="true" />
-                <element signature="e#2683#2684#0" expanded="true" />
-                <element signature="e#2710#2711#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/OrderRepositoryImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="20" />
+            <state relative-caret-position="291">
+              <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3551#3552#0" expanded="true" />
-                <element signature="e#3578#3579#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/ProductRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2940#2941#0" expanded="true" />
-                <element signature="e#2967#2968#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/UsersRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="150" column="8" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5433#5434#0" expanded="true" />
-                <element signature="e#5460#5461#0" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#844#845#0" expanded="true" />
+                <element signature="e#946#947#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1102#1103#0" expanded="true" />
+                <element signature="e#1140#1141#0" expanded="true" />
+                <element signature="e#1211#1212#0" expanded="true" />
+                <element signature="e#1265#1266#0" expanded="true" />
+                <element signature="e#1324#1325#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -265,8 +231,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servers/ClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="233">
+              <caret line="43" column="59" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="43" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -275,16 +241,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/CartService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="90">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
-                <element signature="e#844#845#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://bd25e8b2-9d8a-40c5-9a80-04a60977f281/database/java_lab/schema/public/table/user_products_cart">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+              <column-attributes>
+                <column name="ctid" enabled="false" />
+              </column-attributes>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/CartServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1806#1807#0" expanded="true" />
+                <element signature="e#1843#1844#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -307,6 +295,8 @@
       <find>JavaType</find>
       <find>TokenData</find>
       <find>OrderREpos</find>
+      <find>get</find>
+      <find>get pr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -343,7 +333,6 @@
         <option value="$PROJECT_DIR$/src/main/java/services/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/TokenService.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/UsersRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/protocol/Responce.java" />
         <option value="$PROJECT_DIR$/src/main/java/protocol/Request.java" />
@@ -352,19 +341,11 @@
         <option value="$PROJECT_DIR$/src/main/java/services/PaginationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/ShopList.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/CartService.java" />
         <option value="$PROJECT_DIR$/src/main/java/protocol/Response.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/OrderList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ProgramChatMultiServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/context/ApplicationContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/context/Component.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/ProductsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/context/ApplicationContextReflectionBased.java" />
-        <option value="$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/CartServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/MessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/PaginationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java" />
@@ -373,8 +354,17 @@
         <option value="$PROJECT_DIR$/src/main/java/repositories/OrderRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/ProductRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/UsersRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servers/ClientHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/CartService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/CartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/context/ApplicationContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProgramChatMultiServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servers/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/context/ApplicationContextReflectionBased.java" />
       </list>
     </option>
   </component>
@@ -443,6 +433,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="protocol" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="repositories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -471,9 +469,9 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575452575450" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575473965629" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../JAVA_ENTERPRISE_3/Projects/10. Architecture" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -548,13 +546,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116229000" />
+    <option name="totallyTimeSpent" value="121190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -563,7 +561,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26865673" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26865673" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47097844" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -633,28 +631,10 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java</url>
-          <line>76</line>
+          <url>file://$PROJECT_DIR$/src/main/java/context/ApplicationContextReflectionBased.java</url>
+          <line>29</line>
           <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/services/LoginServiceImpl.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/servers/ClientHandler.java</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="24" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -883,42 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://bd25e8b2-9d8a-40c5-9a80-04a60977f281/database/java_lab/schema/public/table/user_products_cart">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/protocol/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1328#1329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/OrderList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -943,37 +887,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProgramChatMultiServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/context/ApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/context/Component.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -987,16 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/context/ApplicationContextReflectionBased.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/MessageServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1004,22 +914,6 @@
           <folding>
             <element signature="e#1200#1201#0" expanded="true" />
             <element signature="e#1240#1241#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="59" column="58" selection-start-line="59" selection-start-column="58" selection-end-line="59" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#1807#1808#0" expanded="true" />
-            <element signature="e#1847#1848#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1048,28 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/CartServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1718#1719#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-            <element signature="e#1963#1964#0" expanded="true" />
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2244#2245#0" expanded="true" />
-            <element signature="e#2282#2283#0" expanded="true" />
-            <element signature="e#2353#2354#0" expanded="true" />
-            <element signature="e#2407#2408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/CartRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -1078,21 +950,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2973#2974#0" expanded="true" />
             <element signature="e#3000#3001#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/MessageRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="20" />
-          <folding>
-            <element signature="e#2454#2455#0" expanded="true" />
-            <element signature="e#2481#2482#0" expanded="true" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2592#2593#0" expanded="true" />
-            <element signature="e#2683#2684#0" expanded="true" />
-            <element signature="e#2710#2711#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1133,58 +990,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/MessageRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="1173">
+          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#2454#2455#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="true" />
+            <element signature="e#2553#2554#0" expanded="true" />
+            <element signature="e#2592#2593#0" expanded="true" />
+            <element signature="e#2683#2684#0" expanded="true" />
+            <element signature="e#2710#2711#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servers/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="102">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="195">
+          <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2524#2525#0" expanded="true" />
-            <element signature="e#2562#2563#0" expanded="true" />
-            <element signature="e#2633#2634#0" expanded="true" />
-            <element signature="e#2687#2688#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protocol/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/LoginServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        <state relative-caret-position="476">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://bd25e8b2-9d8a-40c5-9a80-04a60977f281/database/java_lab/schema/public/table/user_products_cart">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/CartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/CartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/TokenServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2524#2525#0" expanded="true" />
+            <element signature="e#2562#2563#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servers/ChatMultiServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1324#1325#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protocol/MessageResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="126" column="45" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3707#3708#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3822#3823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servers/ClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="43" column="59" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="43" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ProgramChatMultiServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="110" lean-forward="true" selection-start-line="7" selection-start-column="110" selection-end-line="7" selection-end-column="110" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/context/ApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/context/ApplicationContextReflectionBased.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

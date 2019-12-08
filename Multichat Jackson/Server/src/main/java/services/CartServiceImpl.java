@@ -23,8 +23,10 @@ public class CartServiceImpl implements CartService, Component {
 
     }
 
-    public void addToCart(Request request, Integer userId) {
-            Integer productId = Integer.parseInt(request.getParameter("id"));
+    public void addToCart(Request request) {
+        Integer userId= Integer.parseInt(request.getParameter("user_id"));
+
+        Integer productId = Integer.parseInt(request.getParameter("id"));
             cartRepository.save(userId, productId);
     }
 
@@ -41,12 +43,15 @@ public class CartServiceImpl implements CartService, Component {
          return cart;
     }
 
-    public void buyCart(Integer id) {
+    public void buyCart(Request request) {
+        Integer id = Integer.parseInt(request.getParameter("id"));
+
         orderRepository.saveUsersOrder(id, cartRepository.findById(id).orElseThrow(() -> new IllegalStateException()));
-        clearCart(id);
+        clearCart(request);
     }
 
-    public void clearCart(Integer id) {
+    public void clearCart(Request request) {
+        Integer id = Integer.parseInt(request.getParameter("id"));
         cartRepository.deleteByUserId(id);
     }
 

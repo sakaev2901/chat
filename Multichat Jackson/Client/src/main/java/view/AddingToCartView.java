@@ -3,6 +3,7 @@ package view;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.Payload;
+import net.Session;
 
 import java.util.LinkedHashMap;
 import java.util.Scanner;
@@ -30,6 +31,7 @@ public class AddingToCartView {
             payload.setHeader("Command");
             LinkedHashMap<String, String> commandPayload = new LinkedHashMap<>();
             commandPayload.put("command", "set product to cart");
+            commandPayload.put("user_id", String.valueOf(Session.getInstance().getId()));
             commandPayload.put("id", String.valueOf(id));
             payload.setPayload(commandPayload);
             try {

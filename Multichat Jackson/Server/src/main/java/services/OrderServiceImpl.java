@@ -25,7 +25,8 @@ public class OrderServiceImpl implements OrderService, Component {
     private OrderRepository orderRepository;
     private ProductRepository productRepository;
 
-    public OrderList getOrders(Integer userId) {
+    public OrderList getOrders(Request request) {
+        Integer userId = Integer.parseInt(request.getParameter("id"));
         List<Product> products = null;
         List<Order> orders = orderRepository.findAllByUserId(userId);
         for (Order order:

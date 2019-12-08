@@ -15,7 +15,12 @@ public class ApplicationContextReflectionBased implements ApplicationContext {
             Class fieldClass = field.getType();
             Class<?> fieldImpl = null;
             try {
-                fieldImpl = Class.forName(fieldClass.getTypeName() + "Impl");
+                String classToString = fieldClass.toString();
+                if (!classToString.split(" ")[0].equals("class")) {
+                    fieldImpl = Class.forName(fieldClass.getTypeName() + "Impl");
+                } else  {
+                    fieldImpl = Class.forName(fieldClass.getTypeName());
+                }
                 try {
                     fieldImpl.getMethod("getComponentName");
                     String s = "set" + field.getType().getTypeName().split("\\.")[1];
@@ -37,6 +42,18 @@ public class ApplicationContextReflectionBased implements ApplicationContext {
                 //ignore
             }
 
+        }
+    }
+
+   public  <T> T getComponent(Class<T> componentType, String name) {
+        try {
+            T model = componentType.newInstance();
+            scan(model);
+            return model;
+        } catch (InstantiationException e) {
+            throw new IllegalStateException(e);
+        } catch (IllegalAccessException e) {
+            throw new IllegalStateException(e);
         }
     }
 }

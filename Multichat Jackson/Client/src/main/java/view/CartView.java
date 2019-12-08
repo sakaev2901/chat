@@ -36,10 +36,14 @@ public class CartView {
             switch (button) {
                 case 1: {
                     commandPayload.put("command", "buy cart");
+                    commandPayload.put("id", String.valueOf(Session.getInstance().getId()));
+
                 }
                 break;
                 case 2: {
                     commandPayload.put("command", "clear cart");
+                    commandPayload.put("id", String.valueOf(Session.getInstance().getId()));
+
 
                 }
                 break;

@@ -21,59 +21,54 @@ public class MessageResolver implements Component {
         this.clientHandler = clientHandler;
     }
 
+    public MessageResolver() {
+
+    }
+
     public void handleRequest(String jsonRequest) {
         Request request = new Request(jsonRequest);
         String command = request.getCommand();
+        System.out.println(command);
         switch (command) {
             case "Login": {
-//                this.loginService = new LoginServiceImpl();
                 Response response = Response.build(loginService.login(request));
-                user = (User) response.getData();
+//                user = (User) response.getData();
                 clientHandler.sendMessage(response);
                 break;
             }
             case "Message": {
-//                this.messageService = new MessageServiceImpl();
                 clientHandler.sendMessageAllClient(Response.build(messageService.sendMessage(request)));
                 break;
             }
             case "get messages": {
-//                this.paginationService = new PaginationServiceImpl();
                 clientHandler.sendMessage(Response.build(paginationService.getMessages(request)));
                 break;
             }
             case "set product": {
-//                this.productService = new ProductServiceImpl();
                 productService.addProduct(request);
                 break;
             }
             case "set product to cart": {
-//                this.cartService = new CartServiceImpl();
-                cartService.addToCart(request, user.getId());
+                cartService.addToCart(request);
                 break;
             }
             case "get cart": {
-//                this.cartService = new CartServiceImpl();
                 clientHandler.sendMessage(Response.build(cartService.getCart(request)));
                 break;
             }
             case "get orders": {
-//                this.orderService = new OrderServiceImpl();
-                clientHandler.sendMessage(Response.build(orderService.getOrders(user.getId())));
+                clientHandler.sendMessage(Response.build(orderService.getOrders(request)));
                 break;
             }
             case "buy cart": {
-//                this.cartService = new CartServiceImpl();
-                cartService.buyCart(user.getId());
+                cartService.buyCart(request);
                 break;
             }
             case "clear cart": {
-//                this.cartService = new CartServiceImpl();
-                cartService.clearCart(user.getId());
+                cartService.clearCart(request);
                 break;
             }
             case "get products": {
-//                this.productService = new ProductServiceImpl();
                 clientHandler.sendMessage(Response.build(productService.getProducts()));
             }
         }
@@ -126,6 +121,15 @@ public class MessageResolver implements Component {
 
     public void setOrderService(OrderServiceImpl orderService) {
         this.orderService = orderService;
+    }
+
+
+    public ClientHandler getClientHandler() {
+        return clientHandler;
+    }
+
+    public void setClientHandler(ClientHandler clientHandler) {
+        this.clientHandler = clientHandler;
     }
 
     @Override
