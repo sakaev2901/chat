@@ -1,8 +1,11 @@
+import context.ApplicationContext;
+import context.ApplicationContextReflectionBased;
 import servers.ChatMultiServer;
 
 public class ProgramChatMultiServer {
     public static void main(String[] args) {
-        ChatMultiServer server = new ChatMultiServer();
-        server.start(6666);
+        ApplicationContext applicationContext = new ApplicationContextReflectionBased();
+        ChatMultiServer chatMultiServer = applicationContext.getComponent(ChatMultiServer.class, "chatMultiServer");
+        chatMultiServer.start(6666);
     }
 }

@@ -6,15 +6,17 @@ import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.gen.RSAKeyGenerator;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
+import context.Component;
 import repositories.UsersRepository;
 import repositories.UsersRepositoryImpl;
 import models.User;
 
 import java.text.ParseException;
 
-public class TokenServiceImpl implements TokenService{
+public class TokenServiceImpl implements TokenService, Component {
+    private UsersRepository usersRepository;
+
     public String getToken(Integer id, String role) throws JOSEException {
-        UsersRepository usersRepository = new UsersRepositoryImpl();
         RSAKey rsaKey = new RSAKeyGenerator(2048).keyID(role + id).generate();
         RSAKey rsaKeyPublic = rsaKey.toPublicJWK();
         usersRepository.updateVerifier(rsaKeyPublic.toString(), id);
@@ -29,7 +31,6 @@ public class TokenServiceImpl implements TokenService{
 
     public User parse(String userToken) {
         User user = null;
-        UsersRepository usersRepository = new UsersRepositoryImpl();
         try {
             SignedJWT signedJWT = SignedJWT.parse(userToken);
             JWTClaimsSet claimsSet = signedJWT.getJWTClaimsSet();
@@ -46,14 +47,29 @@ public class TokenServiceImpl implements TokenService{
             try {
                 if (signedJWT.verify(verifier)) {
                     user = usersRepository.findById(id)
-                                        .orElseThrow(IllegalStateException::new);
+                                        .orElse(new User());
+                } else {
+                    user = new User();
                 }
             } catch (JOSEException e) {
-                //ignore
+                    user = new User();
             }
             return user;
         } catch (ParseException e) {
-            return null;
+            return new User();
         }
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
+    }
+
+    public UsersRepository getUsersRepository() {
+        return usersRepository;
+    }
+
+    public void setUsersRepository(UsersRepositoryImpl usersRepository) {
+        this.usersRepository = usersRepository;
     }
 }

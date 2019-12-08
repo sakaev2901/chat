@@ -1,6 +1,9 @@
 package services;
 
+import models.ShopList;
+import protocol.Request;
+
 public interface ProductService {
-    String getProducts();
-    void addProduct(String jsonProduct);
+    ShopList getProducts();
+    void addProduct(Request request);
 }

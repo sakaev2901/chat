@@ -1,12 +1,14 @@
 package services;
 
+import models.Message;
 import models.User;
+import protocol.Request;
 import servers.ChatMultiServer;
 
 import java.util.LinkedHashMap;
 import java.util.List;
 
 public interface MessageService {
-    void sendMessage(LinkedHashMap<String, String> message, List<ChatMultiServer.ClientHandler> clients, User user);
+    Message sendMessage(Request request);
 
 }

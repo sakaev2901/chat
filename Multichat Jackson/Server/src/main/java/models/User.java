@@ -5,6 +5,16 @@ public class User {
     private String name;
     private AuthData authData;
     private String role;
+    private String token;
+
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public String getRole() {
         return role;

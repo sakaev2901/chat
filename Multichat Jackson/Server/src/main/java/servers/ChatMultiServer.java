@@ -1,17 +1,15 @@
 package servers;
 
-import controllers.MessageResolver;
-import models.Message;
+import context.Component;
+import protocol.MessageResolver;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ChatMultiServer {
+public class ChatMultiServer implements Component {
+    private MessageResolver messageResolver;
     private List<ClientHandler> clients;
 
     public ChatMultiServer() {
@@ -28,42 +26,31 @@ public class ChatMultiServer {
 
         while (true) {
             try {
-                new ClientHandler(serverSocket.accept()).start();
+                new ClientHandler(serverSocket.accept(), this).start();
             } catch (IOException e) {
                 throw new IllegalStateException(e);
             }
         }
     }
 
-    public class ClientHandler extends Thread {
-        private Socket clientSocket;
-        private BufferedReader in;
-        MessageResolver messageResolver;
+    public List<ClientHandler> getClients() {
+        return clients;
+    }
 
-        ClientHandler(Socket socket) {
-            this.clientSocket = socket;
-            clients.add(this);
-            System.out.println("New Client");
-        }
+    @Override
+    public String getComponentName() {
+        return null;
+    }
 
-        public void run() {
-            try {
-                in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                String inputLine;
-                this.messageResolver = new MessageResolver(clientSocket, clients, this);
-                while (!clientSocket.isClosed() &&(inputLine = in.readLine()) != null) {
-                    messageResolver.handleRequest(inputLine);
-                }
-                in.close();
-                clientSocket.close();
-                clients.remove(this);
-            } catch (Exception e) {
-                throw new IllegalStateException(e);
-            }
-        }
+    public MessageResolver getMessageResolver() {
+        return messageResolver;
+    }
 
-        public Socket getClientSocket() {
-            return clientSocket;
-        }
+    public void setMessageResolver(MessageResolver messageResolver) {
+        this.messageResolver = messageResolver;
+    }
+
+    public void setClients(List<ClientHandler> clients) {
+        this.clients = clients;
     }
 }

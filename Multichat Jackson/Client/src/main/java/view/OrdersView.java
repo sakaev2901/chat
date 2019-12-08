@@ -17,7 +17,7 @@ public class OrdersView {
             System.out.println(i + ". " + mapItem.get("id") + " " + mapItem.get("date"));
             for (LinkedHashMap<String, String> product:
                  products) {
-                System.out.println(" - " + product.get("id") + " " + product.get("name") + " " + product.get("price"));
+                System.out.println(" - " + String.valueOf(product.get("id")) + " " + product.get("name") + " " + String.valueOf(product.get("price")));
             }
         }
     }

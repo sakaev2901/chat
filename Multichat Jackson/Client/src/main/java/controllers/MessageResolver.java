@@ -10,9 +10,7 @@ import services.*;
 import view.AddingToCartView;
 
 import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 public class MessageResolver {
 
@@ -38,7 +36,7 @@ public class MessageResolver {
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
-        String header = data.getHeader();
+            String header = data.getHeader();
         switch (header) {
             case "Message": {
                 type = objectMapper.getTypeFactory().constructParametricType(Payload.class, Message.class);
@@ -52,11 +50,13 @@ public class MessageResolver {
             }
             break;
             case "messageArchive": {
-                type = objectMapper.getTypeFactory().constructParametricType(Payload.class, LinkedList.class);
+//                type = objectMapper.getTypeFactory().constructParametricType(Payload.class, LinkedList.class);
                 try {
-                    Payload<LinkedList<LinkedHashMap<String, String>>> payloadOfArchive = objectMapper.readValue(serverMessage, type);
-                    LinkedList<LinkedHashMap<String, String>> messageList = payloadOfArchive.getPayload();
+                    Payload payloadOfArchive = objectMapper.readValue(serverMessage, Payload.class);
+                    LinkedHashMap<String, Object> map = (LinkedHashMap<String, Object>)payloadOfArchive.getPayload();
+                    ArrayList<LinkedHashMap<String, String>> messageList = (ArrayList<LinkedHashMap<String, String>>)map.get("messages");
                     new MessageArchiveService(client).receiveArchive(messageList);
+                    System.out.println(payloadOfArchive);
                 } catch (IOException e) {
                     throw new IllegalStateException(e);
                 }
@@ -64,11 +64,11 @@ public class MessageResolver {
             break;
             case "Login": {
                 TokenService tokenService = new TokenService();
-                type = objectMapper.getTypeFactory().constructParametricType(Payload.class, Boolean.class);
                 try {
-                    Payload<Boolean> payloadOfLoginStatus = objectMapper.readValue(serverMessage, type);
-                    Boolean loginStatus = payloadOfLoginStatus.getPayload();
-                    if (loginStatus) {
+                    Payload payloadOfLoginStatus = objectMapper.readValue(serverMessage, Payload.class);
+                    HashMap<String, String> map = (HashMap<String, String>)payloadOfLoginStatus.getPayload();
+                    if (!(map.get("id") == null)) {
+                        tokenService.saveToken(map.get("token"));
                         menuService.receiveMenu();
                     } else {
                         tokenService.deleteToken();
@@ -80,6 +80,30 @@ public class MessageResolver {
                 }
             }
             break;
+            case "get products": {
+                new ShopService(client).receiveProducts(serverMessage);
+                if (session.getRole().equals("user")) {
+                    AddProductToCartService addProductToCartService = new AddProductToCartService(client);
+                    while (addProductToCartService.addToCart()) {
+
+                    }
+                    menuService.receiveMenu();
+                } else {
+                    menuService.receiveMenu();
+                }
+                break;
+            }
+            case "get cart": {
+                new CartService(client).setCart(serverMessage);
+            }
+            break;
+            case "get orders": {
+                OrderService orderService = new OrderService(client);
+                orderService.setOrders(serverMessage);
+                Scanner scanner = new Scanner(System.in);
+                scanner.nextLine();
+                menuService.receiveMenu();
+            } break;
             case "logout": {
 
             }

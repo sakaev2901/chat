@@ -1,6 +1,7 @@
 package repositories;
 
 import config.ConnectionConfig;
+import context.Component;
 import models.Cart;
 import models.Order;
 import models.Product;
@@ -8,7 +9,7 @@ import models.Product;
 import java.sql.*;
 import java.util.*;
 
-public class OrderRepositoryImpl implements OrderRepository{
+public class OrderRepositoryImpl implements OrderRepository, Component {
     private final ConnectionConfig CONFIG =ConnectionConfig.getInstance();
     private final String FIND_ALL = "SELECT * FROM public.order WHERE \"user_id\" = ?;";
     private final String SAVE = "INSERT INTO public.order (user_id) VALUES (?);";
@@ -97,5 +98,10 @@ public class OrderRepositoryImpl implements OrderRepository{
     @Override
     public Optional<Order> findById(Integer integer) {
         return Optional.empty();
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }

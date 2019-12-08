@@ -2,7 +2,11 @@ package services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.org.apache.xpath.internal.operations.Or;
+import context.Component;
 import models.Order;
+import models.OrderList;
+import protocol.Request;
 import repositories.OrderRepository;
 import repositories.OrderRepositoryImpl;
 import repositories.ProductRepository;
@@ -15,12 +19,14 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class OrderServiceImpl implements OrderService{
+public class OrderServiceImpl implements OrderService, Component {
 
 
-    public String getOrders(Integer userId) {
-        OrderRepository orderRepository = new OrderRepositoryImpl();
-        ProductRepository productRepository = new ProductRepositoryImpl();
+    private OrderRepository orderRepository;
+    private ProductRepository productRepository;
+
+    public OrderList getOrders(Request request) {
+        Integer userId = Integer.parseInt(request.getParameter("id"));
         List<Product> products = null;
         List<Order> orders = orderRepository.findAllByUserId(userId);
         for (Order order:
@@ -35,18 +41,29 @@ public class OrderServiceImpl implements OrderService{
                 product.setName(newProduct.getName());
             }
         }
-        Payload<LinkedHashMap<String, Object>> payload = new Payload<>();
-        payload.setHeader("Command");
-        LinkedHashMap<String, Object> mapPayload = new LinkedHashMap<>();
-        mapPayload.put("command", "get orders");
-        mapPayload.put("data", orders);
-        payload.setPayload(mapPayload);
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            String request = objectMapper.writeValueAsString(payload);
-            return request;
-        } catch (JsonProcessingException e) {
-            throw new IllegalStateException(e);
-        }
+        OrderList orderList = new OrderList();
+        orderList.setOrders(orders);
+        return orderList;
+    }
+
+    public OrderRepository getOrderRepository() {
+        return orderRepository;
+    }
+
+    public void setOrderRepository(OrderRepositoryImpl orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+
+    public ProductRepository getProductRepository() {
+        return productRepository;
+    }
+
+    public void setProductRepository(ProductRepositoryImpl productRepository) {
+        this.productRepository = productRepository;
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }

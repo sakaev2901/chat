@@ -7,6 +7,7 @@ import models.Payload;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import view.MessageArchiveView;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -19,7 +20,7 @@ public class MessageArchiveService {
         this.client = client;
     }
 
-    public void receiveArchive(LinkedList<LinkedHashMap<String, String>> messages)  {
+    public void receiveArchive(ArrayList<LinkedHashMap<String, String>> messages)  {
         for (LinkedHashMap<String, String> m:
                 messages) {
             System.out.println(m.get("timeStamp")+" <" + m.get("senderId")+">: "+m.get("text"));

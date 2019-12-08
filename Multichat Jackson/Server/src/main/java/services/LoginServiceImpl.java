@@ -4,6 +4,8 @@ package services;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nimbusds.jose.JOSEException;
+import context.Component;
+import protocol.Request;
 import repositories.UsersRepository;
 import repositories.UsersRepositoryImpl;
 import models.Payload;
@@ -14,60 +16,57 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.LinkedHashMap;
 
-public class LoginServiceImpl implements LoginService{
+public class LoginServiceImpl implements LoginService, Component {
 
-    Socket client;
 
-    public LoginServiceImpl(Socket client) {
-        this.client = client;
+    private UsersRepository usersRepository;
+    private TokenService tokenService;
+
+    public LoginServiceImpl() {
+
     }
 
-    public User login(LinkedHashMap<String, String> authData) {
-        UsersRepository usersRepository = new UsersRepositoryImpl();
+    public User login(Request request) {
         User user = null;
-        if (authData.get("token") != null) {
-            String userToken = authData.get("token");
-            TokenServiceImpl tokenService = new TokenServiceImpl();
+        if (request.getParameter("token") != null) {
+            String userToken = request.getParameter("token");
             user = tokenService.parse(userToken);
         } else {
-            String mail = authData.get("mail");
-            String password = authData.get("password");
+            String mail = request.getParameter("mail");
+            String password = request.getParameter("password");
             user = usersRepository.findByMailAndPassword(mail, password);
 
         }
-        PrintWriter out = null;
-        try {
-            out = new PrintWriter(client.getOutputStream(), true);
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
-        Payload<Boolean> loginPayload = new Payload();
-        loginPayload.setHeader("Login");
-        String loginStatus;
-        if (user != null) {
-            loginPayload.setPayload(true);
+        if (user.getId() != null) {
             try {
-                loginStatus = new ObjectMapper().writeValueAsString(loginPayload);
-                Payload<String> tokenPayload = new Payload<>();
-                tokenPayload.setHeader("Token");
-                tokenPayload.setPayload(new TokenServiceImpl().getToken(user.getId(), user.getRole()));
-                String token = new ObjectMapper().writeValueAsString(tokenPayload);
-                out.println(token);
-                out.println(loginStatus);
-            } catch (JsonProcessingException | JOSEException e) {
+                user.setToken(tokenService.getToken(user.getId(), user.getRole()));
+            } catch ( JOSEException e) {
                 throw new IllegalStateException(e);
             }
             System.out.println(user.getId() + " connected");
-        } else {
-            loginPayload.setPayload(false);
-            try {
-                loginStatus = new ObjectMapper().writeValueAsString(loginPayload);
-                out.println(loginStatus);
-            } catch (JsonProcessingException e) {
-                throw new IllegalStateException(e);
-            }
-
         }
         return user;
+    }
+
+
+    public UsersRepository getUsersRepository() {
+        return usersRepository;
+    }
+
+    public void setUsersRepository(UsersRepositoryImpl usersRepository) {
+        this.usersRepository = usersRepository;
+    }
+
+    public TokenService getTokenService() {
+        return tokenService;
+    }
+
+    public void setTokenService(TokenServiceImpl tokenService) {
+        this.tokenService = tokenService;
+    }
+
+    @Override
+    public String getComponentName() {
+        return null;
     }
 }

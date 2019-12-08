@@ -1,6 +1,7 @@
 package models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import net.Session;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -10,6 +11,7 @@ public class Message {
     private String text;
     private String timeStamp;
     private Integer id;
+    private Integer senderId;
 
     public Message(@JsonProperty("senderName")String senderName,
                    @JsonProperty("text")String text,
@@ -24,6 +26,7 @@ public class Message {
     public Message(String text) {
         this.text = text;
         timeStamp =new SimpleDateFormat("yyyy.MM.dd_HH:mm:ss").format(Calendar.getInstance().getTime());
+        this.senderId = Session.getInstance().getId();
     }
 
     public String getSenderName() {
