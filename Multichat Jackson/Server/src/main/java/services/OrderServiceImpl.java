@@ -8,9 +8,9 @@ import models.Order;
 import models.OrderList;
 import protocol.Request;
 import repositories.OrderRepository;
-import repositories.OrderRepositoryImpl;
+
 import repositories.ProductRepository;
-import repositories.ProductRepositoryImpl;
+
 import models.Payload;
 import models.Product;
 
@@ -50,20 +50,16 @@ public class OrderServiceImpl implements OrderService, Component {
         return orderRepository;
     }
 
-    public void setOrderRepository(OrderRepositoryImpl orderRepository) {
-        this.orderRepository = orderRepository;
-    }
+
 
     public ProductRepository getProductRepository() {
         return productRepository;
     }
 
-    public void setProductRepository(ProductRepositoryImpl productRepository) {
-        this.productRepository = productRepository;
-    }
+
 
     @Override
     public String getComponentName() {
-        return null;
+        return "orderServiceImpl";
     }
 }

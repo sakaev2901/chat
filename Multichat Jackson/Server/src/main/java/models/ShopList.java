@@ -1,15 +1,16 @@
 package models;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class ShopList {
-    private LinkedList<Product> products;
+    private List<Product> products;
 
-    public LinkedList<Product> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(LinkedList<Product> products) {
+    public void setProducts(List<Product> products) {
         this.products = products;
     }
 }

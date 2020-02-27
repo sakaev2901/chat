@@ -1,8 +1,16 @@
 package models;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+@Data
+@AllArgsConstructor
+@Builder
 public class Message {
     private String text;
     private String timeStamp;

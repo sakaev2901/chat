@@ -2,34 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b75efd60-2599-4cbf-b146-53d43dafc2cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/servers/ChatMultiServer$ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/servers/ChatMultiServer$ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/AddingToCartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AddingToCartView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/CartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CartView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/token.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/.idea/Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/config/JdbcTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/config/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/dto/UserSignInDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/jdbcTemplate/CartRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/jdbcTemplate/MessageRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/jdbcTemplate/OrderRepositoryJdbcTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/jdbcTemplate/ProductRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/jdbcTemplate/UsersRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/client.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/token.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/dataSources/bd25e8b2-9d8a-40c5-9a80-04a60977f281.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/dataSources/bd25e8b2-9d8a-40c5-9a80-04a60977f281.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/ProgramChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/ProgramChatMultiServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContextReflectionBased.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/context/ApplicationContextReflectionBased.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/protocol/MessageResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/protocol/MessageResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/models/AuthData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/models/AuthData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/models/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/models/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/models/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/models/ShopList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/models/ShopList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/CartRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/CartRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/MessageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/MessageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/OrderRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/OrderRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/ProductRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/repositories/UsersRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/repositories/UsersRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/servers/ChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/servers/ChatMultiServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/servers/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/servers/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/CartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/MessageServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/context/ApplicationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/context/ApplicationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/PaginationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/PaginationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/services/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/services/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/META-INF/server.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/ProgramChatMultiServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/ProgramChatMultiServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/context/ApplicationContextReflectionBased.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/context/ApplicationContextReflectionBased.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/protocol/MessageResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/protocol/MessageResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/models/AuthData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/models/AuthData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/models/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/models/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/models/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/models/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/models/ShopList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/models/ShopList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/CartRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/MessageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/MessageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/MessageRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/OrderRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/ProductRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/repositories/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/repositories/UsersRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/servers/ChatMultiServer$ClientHandler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/servers/ChatMultiServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/servers/ChatMultiServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/servers/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/servers/ClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/CartService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/CartServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/LoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/MessageServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/PaginationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/PaginationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/target/classes/services/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/target/classes/services/TokenServiceImpl.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,137 +100,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/p2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/CartService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/CartView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/AddingToCartView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="33" column="89" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/ShopService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="42" column="122" selection-start-line="42" selection-start-column="122" selection-end-line="42" selection-end-column="122" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/token.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" selection-start-column="33" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/OrdersView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="149" selection-start-line="19" selection-start-column="149" selection-end-line="19" selection-end-column="149" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ProgramClientChatStart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -209,158 +130,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/controllers/MenuController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/view/LoginView.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/services/CartService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/services/ShopService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/view/AddingToCartView.java" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/controllers/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/LogoutService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/PayloadDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Payload.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/MenuService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/LogoutView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/ChatView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clients/SocketClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ChatService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/MessageArchiveView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ProgramClientChatStart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/p2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/AuthData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/LoginView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/Session.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/AddingroductService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/AddingProductView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/ShopView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/AddingProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/AddProductToCartService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/MenuView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/ShoppingCartView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ShoppingCartService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/MenuService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/services/TokenService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/MessageArchiveService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ShopService.java" />
-        <option value="$PROJECT_DIR$/token.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/services/CartService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/OrdersView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/CartView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/AddingToCartView.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="client2" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="client2" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
+    <setting file="file://$PROJECT_DIR$/src/main/java/controllers/MenuController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/services/CartService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="948" />
-    <option name="width" value="981" />
+    <option name="x" value="420" />
+    <option name="width" value="987" />
     <option name="height" value="1092" />
   </component>
+  <component name="ProjectId" id="1YMl7Z07ZfvVYd9yzxbUIUaaWoR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575395471876" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575473989328" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575995530590" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -373,19 +167,7 @@
       <recent name="C:\Users\LDAR\Desktop\LRNG\JavaLab\Новая папка\chat\Multichat Jackson\Client\src\main\java\view" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.p2">
+  <component name="RunManager" selected="Application.ProgramClientChatStart">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="client" />
@@ -394,8 +176,10 @@
       </method>
     </configuration>
     <configuration name="ProgramClientChatStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="ProgramClientChatStart" />
-      <module name="client" />
+      <module name="Client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -409,8 +193,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.p2" />
         <item itemvalue="Application.ProgramClientChatStart" />
+        <item itemvalue="Application.p2" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -444,86 +228,38 @@
       <workItem from="1575301222293" duration="3704000" />
       <workItem from="1575357887000" duration="36000" />
       <workItem from="1575392943024" duration="366000" />
+      <workItem from="1582760179736" duration="6059000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83792000" />
-    <option name="totallyTimeSpent" value="105064000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36275303" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14251012" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.38142622" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39966834" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.37976784" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39800996" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50040483" side_tool="true" weight="0.23217247" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3283582" />
-      <window_info anchor="bottom" id="Duplicate detector" order="13" weight="0.3283582" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.11255061" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.05059022" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.36275303" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.37976784" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39800996" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50040483" side_tool="true" weight="0.23217247" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3283582" />
-      <window_info anchor="bottom" id="Duplicate detector" order="13" weight="0.3283582" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.11255061" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.05059022" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="360" y="58" key="#ProgramClientChatStart" timestamp="1582760266752">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="360" y="58" key="#ProgramClientChatStart/0.0.1280.720@0.0.1280.720" timestamp="1582760266752" />
+    <state x="421" y="103" key="FileChooserDialogImpl" timestamp="1582760198633">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="421" y="103" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1582760198633" />
+    <state width="1237" height="207" key="GridCell.Tab.0.bottom" timestamp="1582766292309">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="207" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1582766292309" />
+    <state width="1237" height="207" key="GridCell.Tab.0.center" timestamp="1582766292308">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="207" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1582766292308" />
+    <state width="1237" height="207" key="GridCell.Tab.0.left" timestamp="1582766292308">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="207" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1582766292308" />
+    <state width="1237" height="207" key="GridCell.Tab.0.right" timestamp="1582766292308">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="207" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1582766292308" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -531,55 +267,46 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/MenuController.java</url>
           <line>160</line>
-          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/MenuController.java</url>
           <line>139</line>
-          <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/services/MessageArchiveService.java</url>
           <line>25</line>
-          <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/view/OrdersView.java</url>
           <line>9</line>
-          <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/services/OrderService.java</url>
           <line>39</line>
-          <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java</url>
           <line>54</line>
-          <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java</url>
           <line>83</line>
-          <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java</url>
           <line>95</line>
-          <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/services/CartService.java</url>
           <line>32</line>
-          <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
@@ -590,410 +317,6 @@
         <watch expression="payload" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Payload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/type/TypeBindings.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/type/SimpleType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/type/TypeBase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/JavaType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="139" column="42" selection-start-line="138" selection-start-column="12" selection-end-line="139" selection-end-column="42" />
-          <folding>
-            <element signature="e#5606#5607#0" expanded="true" />
-            <element signature="e#5652#5653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/PayloadDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/LogoutService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/p2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/AuthData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-          <folding>
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/LoginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/ChatView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/ShoppingCartView.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/LogoutView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/token3.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" />
-    <entry file="file://$PROJECT_DIR$/target/token.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#489#490#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785">
-          <caret line="767" column="7" lean-forward="true" selection-start-line="767" selection-start-column="7" selection-end-line="767" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/MenuView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/TokenService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProgramClientChatStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/MessageArchiveView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddingProductView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/AddProductToCartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/AddingProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ChatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MessageArchiveService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clients/SocketClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/ShopView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-          <folding>
-            <element signature="e#13573#13574#0" expanded="true" />
-            <element signature="e#13658#13659#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/token.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/OrdersView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="149" selection-start-line="19" selection-start-column="149" selection-end-line="19" selection-end-column="149" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ShopService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="42" column="122" selection-start-line="42" selection-start-column="122" selection-end-line="42" selection-end-column="122" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/CartView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MessageResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/AddingToCartView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="33" column="89" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/p2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProgramClientChatStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

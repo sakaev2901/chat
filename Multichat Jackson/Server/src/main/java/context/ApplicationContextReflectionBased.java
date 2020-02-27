@@ -1,10 +1,15 @@
 package context;
 
+import org.reflections.Reflections;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Set;
 
 public class ApplicationContextReflectionBased implements ApplicationContext {
+
+    private Reflections reflections = new Reflections();
 
     @Override
     public void scan(Object demo) {
@@ -14,46 +19,72 @@ public class ApplicationContextReflectionBased implements ApplicationContext {
                 fields) {
             Class fieldClass = field.getType();
             Class<?> fieldImpl = null;
+            if (!isClass(fieldClass)) {
+                Set<Class> classes = reflections.getSubTypesOf(fieldClass);
+                for (Class implClass:
+                     classes) {
+                    fieldImpl = implClass;
+                }
+            } else  {
+                  fieldImpl = fieldClass;
+            }
             try {
-                String classToString = fieldClass.toString();
-                if (!classToString.split(" ")[0].equals("class")) {
-                    fieldImpl = Class.forName(fieldClass.getTypeName() + "Impl");
-                } else  {
-                    fieldImpl = Class.forName(fieldClass.getTypeName());
-                }
+                fieldImpl.getMethod("getComponentName");
+                field.setAccessible(true);
                 try {
-                    fieldImpl.getMethod("getComponentName");
-                    String s = "set" + field.getType().getTypeName().split("\\.")[1];
-                    System.out.println(s);
-                    Method method = tClass.getMethod(s, fieldImpl);
-                    try {
-                        Object o = fieldImpl.newInstance();
-                        method.invoke(demo, o);
-                        scan(o);
-                        System.out.println(3);
-                    } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
-                        throw new IllegalStateException(e);
-                    }
-                } catch (NoSuchMethodException e) {
-                    //ignore
-                    System.out.println("..");
+                    Object o = fieldImpl.newInstance();
+                    field.set(demo, o);
+                    scan(o);
+                    System.out.println(field.getName() + " SUCCESS");
+                } catch (IllegalAccessException | InstantiationException e) {
+                    throw new IllegalStateException(e);
                 }
-            } catch (ClassNotFoundException e) {
+            } catch (NoSuchMethodException e) {
                 //ignore
+                System.err.println(field.getName() + " is not Component");
             }
 
         }
     }
 
    public  <T> T getComponent(Class<T> componentType, String name) {
-        try {
-            T model = componentType.newInstance();
-            scan(model);
-            return model;
-        } catch (InstantiationException e) {
-            throw new IllegalStateException(e);
-        } catch (IllegalAccessException e) {
-            throw new IllegalStateException(e);
-        }
+       T model;
+       if (isClass(componentType)) {
+           try {
+               model = componentType.newInstance();
+               Method method = componentType.getMethod("getComponentName");
+               String componentName = (String)method.invoke(model);
+               if (componentName.equals(name)) {
+                   scan(model);
+                   System.out.println("SUCCESS");
+                   return model;
+               }
+
+           } catch (Exception e) {
+               throw new IllegalStateException(e);
+           }
+       } else {
+           Set<Class<? extends T>> implementations =  reflections.getSubTypesOf(componentType);
+           for (Class<? extends T> tClass : implementations) {
+               try {
+                   Method method = tClass.getMethod("getComponentName");
+                   T obj = tClass.newInstance();
+                   String componentName = (String) method.invoke(obj);
+                   if (componentName.equals(name)) {
+                       scan(obj);
+                       System.out.println("SUCCESS");
+                       return obj;
+                   }
+               } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+                   throw new IllegalStateException(e);
+               }
+           }
+       }
+       throw new IllegalStateException("no such component");
+    }
+
+    private boolean isClass(Class tClass) {
+        String[] parts = tClass.toString().split(" ");
+        return parts[0].equals("class");
     }
 }

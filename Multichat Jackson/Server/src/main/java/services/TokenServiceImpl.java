@@ -8,7 +8,7 @@ import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
 import context.Component;
 import repositories.UsersRepository;
-import repositories.UsersRepositoryImpl;
+
 import models.User;
 
 import java.text.ParseException;
@@ -62,14 +62,8 @@ public class TokenServiceImpl implements TokenService, Component {
 
     @Override
     public String getComponentName() {
-        return null;
+        return "tokenServiceImpl";
     }
 
-    public UsersRepository getUsersRepository() {
-        return usersRepository;
-    }
 
-    public void setUsersRepository(UsersRepositoryImpl usersRepository) {
-        this.usersRepository = usersRepository;
-    }
 }

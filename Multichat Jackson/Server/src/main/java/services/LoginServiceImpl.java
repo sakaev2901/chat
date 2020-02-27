@@ -7,7 +7,7 @@ import com.nimbusds.jose.JOSEException;
 import context.Component;
 import protocol.Request;
 import repositories.UsersRepository;
-import repositories.UsersRepositoryImpl;
+
 import models.Payload;
 import models.User;
 
@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.LinkedHashMap;
+import java.util.Optional;
 
 public class LoginServiceImpl implements LoginService, Component {
 
@@ -34,8 +35,8 @@ public class LoginServiceImpl implements LoginService, Component {
         } else {
             String mail = request.getParameter("mail");
             String password = request.getParameter("password");
-            user = usersRepository.findByMailAndPassword(mail, password);
-
+            Optional<User> optionalUser = usersRepository.findByMailAndPassword(mail, password);
+            user = optionalUser.isPresent() ? optionalUser.get() : new User();
         }
         if (user.getId() != null) {
             try {
@@ -53,9 +54,7 @@ public class LoginServiceImpl implements LoginService, Component {
         return usersRepository;
     }
 
-    public void setUsersRepository(UsersRepositoryImpl usersRepository) {
-        this.usersRepository = usersRepository;
-    }
+
 
     public TokenService getTokenService() {
         return tokenService;
@@ -67,6 +66,6 @@ public class LoginServiceImpl implements LoginService, Component {
 
     @Override
     public String getComponentName() {
-        return null;
+        return "loginServiceImpl";
     }
 }

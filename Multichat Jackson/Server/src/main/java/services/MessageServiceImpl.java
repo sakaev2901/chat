@@ -1,19 +1,9 @@
 package services;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import context.Component;
 import models.Message;
-import models.Payload;
-import models.User;
 import protocol.Request;
-import repositories.CartRepository;
 import repositories.MessageRepository;
-import repositories.MessageRepositoryImpl;
-import servers.ChatMultiServer;
-
-import java.io.PrintWriter;
-import java.util.LinkedHashMap;
-import java.util.List;
 
 public class MessageServiceImpl implements MessageService, Component {
 
@@ -35,14 +25,8 @@ public class MessageServiceImpl implements MessageService, Component {
 
     @Override
     public String getComponentName() {
-        return null;
+        return "messageServiceImpl";
     }
 
-    public MessageRepository getMessageRepository() {
-        return messageRepository;
-    }
 
-    public void setMessageRepository(MessageRepositoryImpl messageRepository) {
-        this.messageRepository = messageRepository;
-    }
 }

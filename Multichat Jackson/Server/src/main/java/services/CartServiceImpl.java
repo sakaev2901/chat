@@ -57,30 +57,24 @@ public class CartServiceImpl implements CartService, Component {
 
     @Override
     public String getComponentName() {
-        return null;
+        return "cartServiceImpl";
     }
 
     public CartRepository getCartRepository() {
         return cartRepository;
     }
 
-    public void setCartRepository(CartRepositoryImpl cartRepository) {
-        this.cartRepository = cartRepository;
-    }
+
 
     public ProductRepository getProductRepository() {
         return productRepository;
     }
 
-    public void setProductRepository(ProductRepositoryImpl productRepository) {
-        this.productRepository = productRepository;
-    }
+
 
     public OrderRepository getOrderRepository() {
         return orderRepository;
     }
 
-    public void setOrderRepository(OrderRepositoryImpl orderRepository) {
-        this.orderRepository = orderRepository;
-    }
+
 }

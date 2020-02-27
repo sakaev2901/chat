@@ -1,7 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dbcabc3-2bee-4986-a8db-32f9a2317577" name="Default Changelist" comment="" />
+    <list default="true" id="0dbcabc3-2bee-4986-a8db-32f9a2317577" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/token.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.idea/dataSources/bd25e8b2-9d8a-40c5-9a80-04a60977f281.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/dataSources/bd25e8b2-9d8a-40c5-9a80-04a60977f281.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/ProgramChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/ProgramChatMultiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/context/ApplicationContextReflectionBased.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/context/ApplicationContextReflectionBased.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/repositories/CartRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/repositories/CartRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/repositories/MessageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/repositories/MessageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/repositories/OrderRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/repositories/OrderRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/repositories/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/repositories/ProductRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/repositories/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/repositories/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/repositories/UsersRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/repositories/UsersRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/servers/ChatMultiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/servers/ChatMultiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/services/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/services/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/services/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/services/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/services/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/services/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/services/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/services/PaginationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/services/PaginationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/services/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/services/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/services/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/ProgramChatMultiServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/config/ConnectionConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/context/ApplicationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/context/ApplicationContextReflectionBased.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/context/Component.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/AuthData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/Cart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/OrderList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/Pagination.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/Payload.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/ShopList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/protocol/MessageResolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/protocol/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/protocol/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/CartRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/CartRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/CrudRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/MessageRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/MessageRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/OrderRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/OrderRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/ProductRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/UsersRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/repositories/UsersRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/servers/ChatMultiServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/servers/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/CartService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/CartServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/LoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/LogoutServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/MessageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/MessageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/OrderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/PaginationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/PaginationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/TokenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/services/TokenServiceImpl.class" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,23 +80,54 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/src/main/java/ProgramChatMultiServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
+            <state relative-caret-position="34">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/repositories/CrudRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/repositories/CartRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/repositories/OrderRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="948" />
     <option name="width" value="981" />
     <option name="height" value="1092" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -90,19 +192,28 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Multichat Jackson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Multichat Jackson" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572720689831" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -146,27 +257,29 @@
       <option name="presentableId" value="Default" />
       <updated>1572720647310</updated>
       <workItem from="1572720648686" duration="89000" />
+      <workItem from="1579889230371" duration="20000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89000" />
+    <option name="totallyTimeSpent" value="109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
+      <window_info id="DB Browser" />
+      <window_info id="Project Explorer" />
+      <window_info id="Job Explorer" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2534413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Console" />
+      <window_info anchor="bottom" id="DB Execution Console" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -174,15 +287,20 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,8 +321,29 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Server/src/main/java/ProgramChatMultiServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
+        <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/repositories/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/repositories/CartRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/repositories/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>

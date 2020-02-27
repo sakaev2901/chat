@@ -39,7 +39,7 @@ public class ChatMultiServer implements Component {
 
     @Override
     public String getComponentName() {
-        return null;
+        return "chatMultiServer";
     }
 
     public MessageResolver getMessageResolver() {

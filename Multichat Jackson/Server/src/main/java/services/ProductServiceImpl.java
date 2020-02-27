@@ -1,24 +1,18 @@
 package services;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import context.Component;
+import models.Product;
 import models.ShopList;
 import protocol.Request;
 import repositories.ProductRepository;
-import repositories.ProductRepositoryImpl;
-import models.Payload;
-import models.Product;
 
-import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
+import java.util.List;
 
 public class ProductServiceImpl implements ProductService, Component {
     private ProductRepository productRepository;
 
     public ShopList getProducts() {
-        LinkedList<Product> products = productRepository.findAll();
+        List<Product> products = productRepository.findAll();
         ShopList shopList = new ShopList();
         shopList.setProducts(products);
         return shopList;
@@ -34,14 +28,7 @@ public class ProductServiceImpl implements ProductService, Component {
 
     @Override
     public String getComponentName() {
-        return null;
+        return "productServiceImpl";
     }
 
-    public ProductRepository getProductRepository() {
-        return productRepository;
-    }
-
-    public void setProductRepository(ProductRepositoryImpl productRepository) {
-        this.productRepository = productRepository;
-    }
 }
